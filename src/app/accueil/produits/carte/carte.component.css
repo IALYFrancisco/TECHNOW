@@ -1,0 +1,75 @@
+div.parent {
+    background-color: #E6E7E8;
+    width: calc(100vw - 300px);
+    height: max-content;
+    padding: 2px;
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.parent div.carte {
+    width: 200px;
+    height: 300px;
+    box-shadow: 0 0 5px #333;
+    margin: 32px;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+div.parent div.carte div.img {
+    width: 100%;
+    height: 200px;
+}
+
+div.parent div.carte div.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+div.parent div.carte div.nom {
+    width: 100%;
+    height: 40px;
+    font-family: poppins;
+    padding-left: 10px;
+    color: #333;
+}
+
+div.parent div.carte div.action {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div.parent div.carte div.action img {
+    width: 35px;
+}
+
+div.parent div.carte div.action img:hover {
+    cursor: pointer;
+}
+
+div.parent div.carte div.action img:active {
+    transform: scale(0.9);
+}
+
+div.parent div.carte div.action button {
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #34A853;
+    color: white;
+    font-family: poppins;
+    box-shadow: 0 0 3px #333;
+}
+
+div.parent div.carte div.action button:active {
+    transform: scale(0.9);
+}

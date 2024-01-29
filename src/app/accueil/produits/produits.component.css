@@ -1,0 +1,7 @@
+div.container-produits {
+    width: 100%;
+    height: max-content;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
