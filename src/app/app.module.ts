@@ -9,10 +9,12 @@ import { NavComponent } from './accueil/nav/nav.component';
 import { ProduitsComponent } from './accueil/produits/produits.component';
 import { CategorieComponent } from './accueil/produits/categorie/categorie.component';
 import { CarteComponent } from './accueil/produits/carte/carte.component';
+import { AdminDashboardComponent } from './views/admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
-  { path: 'accueil', component:AccueilComponent},
-  { path: '', redirectTo:'/accueil', pathMatch: 'full'}
+  { path: 'accueil', component:AccueilComponent },
+  { path: 'admindashboard', component:AdminDashboardComponent },
+  { path: '', redirectTo:'/accueil', pathMatch: 'full' }
 ]
 
 @NgModule({
@@ -25,7 +27,11 @@ const routes: Routes = [
     CarteComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
