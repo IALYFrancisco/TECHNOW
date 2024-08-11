@@ -7,9 +7,18 @@ import { NavComponent } from './accueil/nav/nav.component';
 import { ProduitsComponent } from './accueil/produits/produits.component';
 import { CategorieComponent } from './accueil/produits/categorie/categorie.component';
 import { CarteComponent } from './accueil/produits/carte/carte.component';
+import { AdmindashboardComponent } from './views/admindashboard/admindashboard.component';
+import { SidebarComponent } from './components/admindashboard/sidebar/sidebar.component';
+import { AdminallproductsComponent } from './components/admindashboard/adminallproducts/adminallproducts.component';
+import { AdminsettingsComponent } from './components/admindashboard/adminsettings/adminsettings.component';
 
 const routes: Routes = [
   { path: '', component:AccueilComponent },
+  { path: 'admindashboard', component: AdmindashboardComponent, children: [
+    { path: '', component: AdminallproductsComponent },
+    { path: 'settings', component: AdminsettingsComponent }
+  ] 
+  }
 ]
 
 @NgModule({
@@ -20,6 +29,9 @@ const routes: Routes = [
     ProduitsComponent,
     CategorieComponent,
     CarteComponent,
+    AdmindashboardComponent,
+    SidebarComponent,
+    AdminallproductsComponent,
   ],
   imports: [
     BrowserModule,
