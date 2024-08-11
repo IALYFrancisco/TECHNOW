@@ -1,5 +1,31 @@
 nav {
-    width: 40px;
+    width: 55px;
     height: 100vh;
-    background-color: #F6C93C;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+nav > img{
+    width: 30px;
+    margin: 0 auto;
+}
+
+nav ul {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-top: 130px;
+    line-height: 60px;
+}
+
+nav ul li {
+    margin: 0 auto;
+}
+
+nav ul li a img {
+    width: 25px;
 }

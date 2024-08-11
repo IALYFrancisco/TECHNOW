@@ -1,11 +1,11 @@
 article {
-    width: 230px;
+    width: 200px;
     height: max-content;
-    background: #F6C93C;
+    background: rebeccapurple;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    color: #4F5963;
+    color: white;
 }
 
 article p.titre {
@@ -28,6 +28,7 @@ article ul li {
     margin-top: 20px;
     margin-bottom: 20px;
     transition: 0.2s;
+    font-weight: 100;
 }
 
 article ul li:hover {
@@ -38,7 +39,7 @@ article ul li:hover {
 }
 
 article ul li img {
-    width: 30px;
+    width: 20px;
     margin-left: 5px;
     margin-right: 10px;
 }
