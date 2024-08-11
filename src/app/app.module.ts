@@ -12,9 +12,8 @@ import { CarteComponent } from './accueil/produits/carte/carte.component';
 import { AdminDashboardComponent } from './views/admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
-  { path: 'accueil', component:AccueilComponent },
+  { path: '', component:AccueilComponent },
   { path: 'admindashboard', component:AdminDashboardComponent },
-  { path: '', redirectTo:'/accueil', pathMatch: 'full' }
 ]
 
 @NgModule({

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
+@Inject(DataService)
 @Component({
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html',
@@ -8,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class AdminDashboardComponent implements OnInit {
 
   constructor() { }
+
+  data:any = DataService
+
+  displayLog(): void {
+    this.data.giveMessage()
+  }
 
   ngOnInit(): void {
   }
