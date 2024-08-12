@@ -10,11 +10,11 @@ div.parent {
 
 div.parent div.carte {
     width: 200px;
-    height: 300px;
+    height: max-content;
     box-shadow: 0 0 5px #333;
     margin: 32px;
     border-radius: 2px;
-    padding: 2px;
+    padding: 2px 2px 15px 2px;
 }
 
 div.parent div.carte div.img {
@@ -59,7 +59,7 @@ div.parent div.carte div.action img:active {
 }
 
 div.parent div.carte div.action button {
-    width: 70px;
+    width: 100%;
     height: 30px;
     cursor: pointer;
     border: none;
@@ -67,9 +67,15 @@ div.parent div.carte div.action button {
     background-color: #34A853;
     color: white;
     font-family: poppins;
-    box-shadow: 0 0 3px #333;
+    box-shadow: 0 0 3px #33333363;
+    border-radius: 3px;
 }
 
 div.parent div.carte div.action button:active {
-    transform: scale(0.9);
+    transform: scale(0.98);
+}
+
+div.parent div.carte div.action button.disabled {
+    background-color: #a4a4a4;
+    transform: none;
 }

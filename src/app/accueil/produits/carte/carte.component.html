@@ -1,82 +1,13 @@
 <div [ngClass] = "{'parent' : true}">
-
-    <div [ngClass] = "{'carte' : true}">
+    <div [ngClass] = "{'carte' : true}" *ngFor="let product of products">
         <div [ngClass] = "{'img' : true}">
-            <img src="" alt="" [src] = 'monImage1'>
+            <img src="" alt="" [src] = 'product.img_url'>
         </div>
         <div [ngClass] = "{'nom' : true}">
-            Boîtier noir
+            {{ product.name}}
         </div>
         <div [ngClass] = "{'action' : true}">
-            <img src="" alt="" [src] = 'adore'>
-            <i [ngClass] = "{'fa fa-info' : true}"></i>
-            <button type="button" (click)="declencheur();">Ajouter</button>
-        </div>
-    </div>
-
-    <div [ngClass] = "{'carte' : true}">
-        <div [ngClass] = "{'img' : true}">
-            <img src="" alt="" [src] = 'monImage2'>
-        </div>
-        <div [ngClass] = "{'nom' : true}">
-            Carte graphique
-        </div>
-        <div [ngClass] = "{'action' : true}">
-            <img src="" alt="" [src] = 'adore'>
-            <i [ngClass] = "{'fa fa-info' : true}"></i>
-            <button type="button" (click)="declencheur();">Ajouter</button>
-        </div>
-    </div>
-    <div [ngClass] = "{'carte' : true}">
-        <div [ngClass] = "{'img' : true}">
-            <img src="" alt="" [src] = 'monImage3'>
-        </div>
-        <div [ngClass] = "{'nom' : true}">
-            Carte mère
-        </div>
-        <div [ngClass] = "{'action' : true}">
-            <img src="" alt="" [src] = 'adore'>
-            <i [ngClass] = "{'fa fa-info' : true}"></i>
-            <button type="button" (click)="declencheur();">Ajouter</button>
-        </div>
-    </div>
-    <div [ngClass] = "{'carte' : true}">
-        <div [ngClass] = "{'img' : true}">
-            <img src="" alt="" [src] = 'monImage4'>
-        </div>
-        <div [ngClass] = "{'nom' : true}">
-            RAM DDR4
-        </div>
-        <div [ngClass] = "{'action' : true}">
-            <img src="" alt="" [src] = 'adore'>
-            <i [ngClass] = "{'fa fa-info' : true}"></i>
-            <button type="button" (click)="declencheur();">Ajouter</button>
-        </div>
-    </div>
-    <div [ngClass] = "{'carte' : true}">
-        <div [ngClass] = "{'img' : true}">
-            <img src="" alt="" [src] = 'monImage5'>
-        </div>
-        <div [ngClass] = "{'nom' : true}">
-            Boîtier blanc
-        </div>
-        <div [ngClass] = "{'action' : true}">
-            <img src="" alt="" [src] = 'adore'>
-            <i [ngClass] = "{'fa fa-info' : true}"></i>
-            <button type="button" (click)="declencheur();">Ajouter</button>
-        </div>
-    </div>
-    <div [ngClass] = "{'carte' : true}">
-        <div [ngClass] = "{'img' : true}">
-            <img src="" alt="" [src] = 'monImage6'>
-        </div>
-        <div [ngClass] = "{'nom' : true}">
-            Processeur coreI-5 10e
-        </div>
-        <div [ngClass] = "{'action' : true}">
-            <img src="" alt="" [src] = 'adore'>
-            <i [ngClass] = "{'fa fa-info' : true}"></i>
-            <button type="button" (click)="declencheur();">Ajouter</button>
+            <button type="button" [ngClass]="{ 'disabled' : userNotConnected }">add to cart</button>
         </div>
     </div>
 </div>
