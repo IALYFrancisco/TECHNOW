@@ -1,6 +1,6 @@
 div.parent {
     background-color: #E6E7E8;
-    width: calc(100vw - 300px);
+    width: calc(100vw - 250px);
     height: max-content;
     padding: 2px;
     border-radius: 2px;
