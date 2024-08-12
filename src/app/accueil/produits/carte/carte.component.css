@@ -2,19 +2,19 @@ div.parent {
     background-color: #E6E7E8;
     width: calc(100vw - 250px);
     height: max-content;
-    padding: 2px;
+    padding: 20px;
     border-radius: 2px;
     display: flex;
     flex-wrap: wrap;
 }
 
 div.parent div.carte {
-    width: 200px;
+    width: 170px;
     height: max-content;
-    box-shadow: 0 0 5px #333;
-    margin: 32px;
+    box-shadow: 0 0 5px #83838379;
+    margin: 0px 20px 32px 20px;
     border-radius: 2px;
-    padding: 2px 2px 15px 2px;
+    padding: 2px 2px 12px 2px;
 }
 
 div.parent div.carte div.img {
@@ -29,12 +29,14 @@ div.parent div.carte div.img img {
     border-radius: 2px;
 }
 
-div.parent div.carte div.nom {
+div.parent div.carte div.name {
     width: 100%;
-    height: 40px;
-    font-family: poppins;
-    padding-left: 10px;
-    color: #333;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-family: 'Poppins Light';
+    font-size: 13px;
+    padding-left: 8px;
 }
 
 div.parent div.carte div.action {
@@ -64,11 +66,20 @@ div.parent div.carte div.action button {
     cursor: pointer;
     border: none;
     outline: none;
+    color: rgb(255, 255, 255);
     background-color: #34A853;
-    color: white;
-    font-family: poppins;
+    font-family: 'Poppins Light';
+    font-size: 12px;
     box-shadow: 0 0 3px #33333363;
     border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.parent div.carte div.action button img {
+    width: 15px;
+    margin-left: 5px;
 }
 
 div.parent div.carte div.action button:active {

@@ -1,13 +1,16 @@
 <div [ngClass] = "{'parent' : true}">
     <div [ngClass] = "{'carte' : true}" *ngFor="let product of products">
-        <div [ngClass] = "{'img' : true}">
+        <div class="img">
             <img src="" alt="" [src] = 'product.img_url'>
         </div>
-        <div [ngClass] = "{'nom' : true}">
+        <div class="name">
             {{ product.name}}
         </div>
         <div [ngClass] = "{'action' : true}">
-            <button type="button" [ngClass]="{ 'disabled' : userNotConnected }">add to cart</button>
+            <button type="button" [ngClass]="{ 'disabled' : userNotConnected }">
+                add to cart
+                <img src="../../../../assets/ICON/add_to_cart.png" alt="">
+            </button>
         </div>
     </div>
 </div>
