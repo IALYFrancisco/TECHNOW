@@ -18,7 +18,7 @@ article ul {
 }
 
 article ul li {
-    font-family: 'Poppins Regular';
+    font-family: 'Poppins Light';
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -30,7 +30,6 @@ article ul li {
 article ul li:hover {
     transform: translateX(5px);
     cursor: pointer;
-    text-decoration: underline;
     transition: 0.2s;
 }
 
