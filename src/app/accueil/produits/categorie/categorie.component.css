@@ -1,20 +1,16 @@
 article {
     width: 200px;
     height: max-content;
-    background: rebeccapurple;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    color: white;
 }
 
-article p.titre {
-    font-family: poppins;
-    font-size: 25px;
-    border-bottom-color: #6A1617;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    margin-bottom: 20px;
+article p.title {
+    font-family: poppins regular;
+    font-size: 15px;
+    border-bottom: rebeccapurple 2px solid;
+    width: 50px;
 }
 
 article ul {
@@ -22,24 +18,23 @@ article ul {
 }
 
 article ul li {
-    font-family: poppins;
+    font-family: 'Poppins Regular';
+    font-size: 12px;
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 18px;
+    margin-bottom: 18px;
     transition: 0.2s;
-    font-weight: 100;
 }
 
 article ul li:hover {
-    transform: translateX(15px);
+    transform: translateX(5px);
     cursor: pointer;
     text-decoration: underline;
     transition: 0.2s;
 }
 
 article ul li img {
-    width: 20px;
-    margin-left: 5px;
-    margin-right: 10px;
+    width: 16px;
+    margin-right: 6px;
 }
