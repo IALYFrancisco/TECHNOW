@@ -1,13 +1,13 @@
 <div class="informations">
     <div class="input">
         <div class="search_icon">
-            <img src="" alt="">
+            <img src="../../../../assets/ICON/search.png" alt="">
         </div>
         <input type="search" name="search=" id="" placeholder="Search ...">
     </div>
 </div>
 <div class="parent">
-    <div [ngClass] = "{'carte' : true}" *ngFor="let product of products">
+    <div class="carte" *ngFor="let product of products">
         <div class="img">
             <img src="" alt="" [src] = 'product.img_url'>
         </div>
