@@ -18,6 +18,8 @@ article ul {
 }
 
 article ul li {
+    width: 100%;
+    height: max-content;
     font-family: 'Poppins Light';
     font-size: 12px;
     display: flex;
@@ -25,6 +27,17 @@ article ul li {
     margin-top: 18px;
     margin-bottom: 18px;
     transition: 0.2s;
+}
+
+article ul li span {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+article ul li span:nth-child(2) {
+    padding-left: 40px;
 }
 
 article ul li:hover {
@@ -36,4 +49,49 @@ article ul li:hover {
 article ul li img {
     width: 16px;
     margin-right: 6px;
+}
+
+article:nth-child(2) ul li {
+    display: flex;
+    flex-direction: column;
+    height: 16px;
+    overflow-y: hidden;
+    /* background-color: red; */
+}
+
+article:nth-child(2) ul li div.option span:nth-child(2) img.toggled {
+        
+}
+
+article:nth-child(2) ul li.toggled {
+    height: max-content;
+}
+
+article:nth-child(2) ul li div.option{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+article:nth-child(2) ul li div.option{
+    height: max-content;
+}
+
+article:nth-child(2) ul li div.colors{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    /* background-color: rebeccapurple; */
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 7px;
+}
+
+article:nth-child(2) ul li div.colors div.color {
+    width: 15px;
+    height: 15px;
+    background-color: green;
+    margin: 0 3px 5px 3px;
+    border-radius: 50%;
 }
