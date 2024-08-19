@@ -26,14 +26,14 @@
 <article>
     <p class="title">Filters</p>
     <ul>
-        <li [ngClass]="{'toggled': optionToggled}">
-            <div class="option" (click)="toggle()">
+        <li [ngClass]="{'toggled': colorOptionToggled}">
+            <div class="color_option" (click)="colorToggle()">
                 <span>
                     <img alt="" src="../../../../assets/ICON/color.png">
                     Color
                 </span>
                 <span>
-                    <img [ngClass]="{'toggled': optionToggled}" src="../../../../assets/ICON/arrow.png" alt="">
+                    <img [ngClass]="{'toggled': colorOptionToggled}" src="../../../../assets/ICON/arrow.png" alt="">
                 </span>
             </div>
             <div class="colors">
@@ -49,14 +49,36 @@
                 <div class="color"></div>
             </div>
         </li>
-        <li>
-            <span>
-                <img alt="" src="../../../../assets/ICON/price.png">
-                Price
-            </span>
-            <span>
-                <img src="../../../../assets/ICON/arrow.png" alt="">
-            </span>
+        <li [ngClass]="{'toggled': priceOptionToggled}">
+            <div class="price_option" (click)="priceToggle()">
+                <span>
+                    <img alt="" src="../../../../assets/ICON/price.png">
+                    Price
+                </span>
+                <span>
+                    <img src="../../../../assets/ICON/arrow.png" alt="">
+                </span>
+            </div>
+            <div class="prices">
+                <div class="more">
+                    <div class="more_number">
+                        more
+                    </div>
+                    <input type="number" name="" id="" placeholder="i.e: 200,000 Ar">
+                </div>
+                <div class="equal">
+                    <div class="equal_number">
+                        equal
+                    </div>
+                    <input type="number" name="" id="" placeholder="i.e: 200,000 Ar">
+                </div>
+                <div class="less">
+                    <div class="less_number">
+                        less
+                    </div>
+                    <input type="number" name="" id="" placeholder="i.e: 200,000 Ar">
+                </div>
+            </div>
         </li>
     </ul>
 </article>
