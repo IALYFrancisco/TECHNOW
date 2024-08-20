@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-accueil',
@@ -6,12 +6,6 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent implements OnInit {
-
-  @Output() result2:any;
-
-  recuperation2(nouvelle1:any) {
-    this.result2 = nouvelle1;
-  }
 
   constructor() { }
 

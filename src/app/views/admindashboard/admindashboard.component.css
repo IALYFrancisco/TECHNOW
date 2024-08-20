@@ -1,0 +1,7 @@
+div.left {
+    display: flex;
+}
+
+div.left div.right {
+    width: 100%;
+}
