@@ -70,6 +70,15 @@ article:nth-child(2) ul li.toggled {
     height: max-content;
 }
 
+article:nth-child(2) ul li div:nth-child(1) span:nth-child(2) img {
+    transition: 0.125s;
+}
+
+article:nth-child(2) ul li div:nth-child(1) span:nth-child(2) img.toggled {
+    transform: rotateZ(90deg);
+    transition: 0.125s;
+}
+
 article:nth-child(2) ul li div.color_option,
 article:nth-child(2) ul li div.price_option{
     width: 100%;

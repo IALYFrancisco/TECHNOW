@@ -14,7 +14,7 @@
         <div class="name">
             {{ product.name}}
         </div>
-        <div [ngClass] = "{'action' : true}">
+        <div class="action">
             <button type="button" [ngClass]="{ 'disabled' : userNotConnected }">
                 add to cart
                 <img src="../../../../assets/ICON/add_to_cart.png" alt="">
