@@ -11,6 +11,7 @@ import { AdmindashboardComponent } from './views/admindashboard/admindashboard.c
 import { SidebarComponent } from './components/admindashboard/sidebar/sidebar.component';
 import { AdminallproductsComponent } from './components/admindashboard/adminallproducts/adminallproducts.component';
 import { AdminsettingsComponent } from './components/admindashboard/adminsettings/adminsettings.component';
+import { NavbarComponent } from './components/admindashboard/navbar/navbar.component';
 
 const routes: Routes = [
   { path: '', component:AccueilComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
     AdmindashboardComponent,
     SidebarComponent,
     AdminallproductsComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

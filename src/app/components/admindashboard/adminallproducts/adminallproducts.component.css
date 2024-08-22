@@ -1,0 +1,40 @@
+div.container {
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 20px 40px;
+    /* background-color: green; */
+    font-family: poppins thin;
+}
+
+div.container h3 {
+    width: 50px;
+    border-bottom: 2px rebeccapurple solid;
+}
+
+div.container > div {
+    width: 96%;
+    height: 42px;
+    background-color: rgb(185, 165, 207);
+    margin: 20px auto 0 auto;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 15px;
+    transition: 0.15s;
+}
+
+div.container > div:hover {
+    background-color: rebeccapurple;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+div.container > div:active {
+    transform: scale(0.995);
+}
+
+div.container div div.left p {
+    font-size: 14px;
+    font-family: poppins;
+} 
