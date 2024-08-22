@@ -15,7 +15,7 @@ import { NavbarComponent } from './components/admindashboard/navbar/navbar.compo
 
 const routes: Routes = [
   { path: '', component:AccueilComponent },
-  { path: 'admin', component: AdmindashboardComponent, children: [
+  { path: 'admindashboard', component: AdmindashboardComponent, children: [
     { path: '', component: AdminallproductsComponent },
     { path: 'settings', component: AdminsettingsComponent }
   ] 
