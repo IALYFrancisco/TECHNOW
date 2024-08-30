@@ -19,7 +19,7 @@ div.container > div {
     display: flex;
     align-items: center;
     color: white;
-    padding: 0 15px;
+    padding: 0 8px 0 15px;
     transition: 0.15s;
     justify-content: space-between;
 }
@@ -37,13 +37,34 @@ div.container > div:active {
 div.container div div.left p {
     font-size: 14px;
     font-family: poppins;
-} 
+/* <<<<<<< HEAD */
+}
 
 div.container div div.right {
+/* ======= */
+    width: max-content;
+}
+
+div.container div div.right {
+    width: max-content;
+    height: 100%;
+/* >>>>>>> 5403a373ff0fc1992dd79f35902900e039e7ca95 */
     display: flex;
     align-items: center;
-} 
+}
 
+/* /* <<<<<<< HEAD
 div.container div div.right img {
     width: 20px;
+======= */
+div.container div div button {
+    width: 100px;
+    height: 65%;
+    background-color: white;
+    border: none;
+    font-family: poppins;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 11px;
+/* >>>>>>> 5403a373ff0fc1992dd79f35902900e039e7ca95 */
 }
