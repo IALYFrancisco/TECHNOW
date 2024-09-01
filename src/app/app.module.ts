@@ -13,7 +13,7 @@ import { AdminallproductsComponent } from './components/admindashboard/adminallp
 import { AdminsettingsComponent } from './components/admindashboard/adminsettings/adminsettings.component';
 import { NavbarComponent } from './components/admindashboard/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AddproductComponent } from './components/admindashboard/addproduct/addproduct.component';
 const routes: Routes = [
   { path: '', component:AccueilComponent },
   { path: 'admindashboard', component: AdmindashboardComponent, children: [
@@ -35,6 +35,7 @@ const routes: Routes = [
     SidebarComponent,
     AdminallproductsComponent,
     NavbarComponent,
+    AddproductComponent
   ],
   imports: [
     BrowserModule,

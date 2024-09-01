@@ -1,4 +1,5 @@
 <div class="container">
+    <app-addproduct [_toggled]="toggled"></app-addproduct>
     <h3>Products</h3>
     <div class="categories_container">
         <div class="left">
@@ -13,7 +14,7 @@
             <p>all products</p>
         </div>
         <div class="right">
-            <button>add product</button>
+            <button (click)="addProduct()">add product</button>
         </div>
     </div>
 </div>
