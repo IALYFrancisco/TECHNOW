@@ -12,13 +12,14 @@ import { SidebarComponent } from './components/admindashboard/sidebar/sidebar.co
 import { AdminallproductsComponent } from './components/admindashboard/adminallproducts/adminallproducts.component';
 import { AdminsettingsComponent } from './components/admindashboard/adminsettings/adminsettings.component';
 import { NavbarComponent } from './components/admindashboard/navbar/navbar.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AddproductComponent } from './components/admindashboard/addproduct/addproduct.component';
 const routes: Routes = [
   { path: '', component:AccueilComponent },
   { path: 'admindashboard', component: AdmindashboardComponent, children: [
     { path: '', component: AdminallproductsComponent },
     { path: 'settings', component: AdminsettingsComponent }
-  ] 
+  ]
   }
 ]
 
@@ -34,15 +35,19 @@ const routes: Routes = [
     SidebarComponent,
     AdminallproductsComponent,
     NavbarComponent,
+    AddproductComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   exports: [
     RouterModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
