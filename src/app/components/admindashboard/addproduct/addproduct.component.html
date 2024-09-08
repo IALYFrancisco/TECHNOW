@@ -1,11 +1,11 @@
 <div class="container" *ngIf="_toggled">
-  <form action="" [formGroup]="addProductForm" (submit)="getProductObject()">
+  <form action="" [formGroup]="addProductForm" (submit)="postMethod()">
     <fieldset>
       <legend>Adding product</legend>
       <div class="element">
         <label for="categorie">Categorie</label>
         <select name="categorie" id="categorie" formControlName="categorie">
-          <option value="boitier">Boititer</option>
+          <option value="uc">Boititer</option>
           <option value="motherboard">Carte mère</option>
           <option value="cpu">Processeur</option>
           <option value="ram">RAM</option>
@@ -26,15 +26,15 @@
       </div>
       <div class="element">
         <label for="color">Color</label>
-        <input type="color" value="238000ff" name="color" id="color" formControlName="color">
+        <input type="color" default="" name="color" id="color" formControlName="color">
       </div>
       <div class="element">
         <label for="stock">Stock</label>
-        <input type="number" name="stock" id="stock" formArrayName="stock">
+        <input type="number" name="stock" id="stock" formControlName="stock">
       </div>
       <div class="element">
         <label for="image_file_url">Image</label>
-        <input type="text" name="image_file" id="image_file" formControlName="image">
+        <input type="text" name="image_file_url" id="image_file_url" formControlName="image_file_url">
       </div>
       <div class="element">
         <label for="description">Description</label>
