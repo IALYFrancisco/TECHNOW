@@ -23,8 +23,8 @@ export class AddproductComponent implements OnInit {
     description: new FormControl('', [Validators.required]),
   })
 
-  getProductObject():void {
-    console.log(this.addProductForm.value)
+  getProductObject():any {
+    return this.addProductForm.value
   }
 
   ngOnInit(): void {
