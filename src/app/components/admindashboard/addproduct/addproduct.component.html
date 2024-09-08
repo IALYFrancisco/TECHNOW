@@ -1,7 +1,48 @@
 <div class="container" *ngIf="_toggled">
-  <form action="">
+  <form action="" [formGroup]="addProductForm" (submit)="getProductObject()">
     <fieldset>
       <legend>Adding product</legend>
+      <div class="element">
+        <label for="categorie">Categorie</label>
+        <select name="categorie" id="categorie" formControlName="categorie">
+          <option value="boitier">Boititer</option>
+          <option value="motherboard">Carte mère</option>
+          <option value="cpu">Processeur</option>
+          <option value="ram">RAM</option>
+          <option value="gpu">Carte graphique</option>
+        </select>
+      </div>
+      <div class="element">
+        <label for="mark">Mark</label>
+        <input type="text" name="mark" id="mark" formControlName="mark">
+      </div>
+      <div class="element">
+        <label for="model">Model</label>
+        <input type="text" name="model" id="model" formControlName="model">
+      </div>
+      <div class="element">
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" formControlName="price">
+      </div>
+      <div class="element">
+        <label for="color">Color</label>
+        <input type="color" value="238000ff" name="color" id="color" formControlName="color">
+      </div>
+      <div class="element">
+        <label for="stock">Stock</label>
+        <input type="number" name="stock" id="stock" formArrayName="stock">
+      </div>
+      <div class="element">
+        <label for="image_file_url">Image</label>
+        <input type="text" name="image_file" id="image_file" formControlName="image">
+      </div>
+      <div class="element">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" formControlName="description"></textarea>
+      </div>
+      <div class="element">
+        <button type="submit">add</button>
+      </div>
     </fieldset>
   </form>
 </div>

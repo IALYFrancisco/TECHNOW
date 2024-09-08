@@ -37,26 +37,19 @@ div.container > div:active {
 div.container div div.left p {
     font-size: 14px;
     font-family: poppins;
-/* <<<<<<< HEAD */
 }
 
 div.container div div.right {
-/* ======= */
     width: max-content;
 }
 
 div.container div div.right {
     width: max-content;
     height: 100%;
-/* >>>>>>> 5403a373ff0fc1992dd79f35902900e039e7ca95 */
     display: flex;
     align-items: center;
 }
 
-/* /* <<<<<<< HEAD
-div.container div div.right img {
-    width: 20px;
-======= */
 div.container div div button {
     width: 100px;
     height: 65%;
@@ -66,5 +59,4 @@ div.container div div button {
     cursor: pointer;
     border-radius: 3px;
     font-size: 11px;
-/* >>>>>>> 5403a373ff0fc1992dd79f35902900e039e7ca95 */
 }

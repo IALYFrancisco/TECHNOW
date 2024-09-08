@@ -14,6 +14,9 @@ import { AdminsettingsComponent } from './components/admindashboard/adminsetting
 import { NavbarComponent } from './components/admindashboard/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddproductComponent } from './components/admindashboard/addproduct/addproduct.component';
+import { ReactiveFormsModule } from '@angular/forms'
+
+
 const routes: Routes = [
   { path: '', component:AccueilComponent },
   { path: 'admindashboard', component: AdmindashboardComponent, children: [
@@ -40,7 +43,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     RouterModule
