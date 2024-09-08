@@ -1,6 +1,6 @@
 div.container {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 45%;
   background-color: white;
   padding: 5px 3px 3px 3px;
@@ -30,7 +30,7 @@ div.container form fieldset legend {
 div.container form fieldset div.element {
   width: 100%;
   height: max-content;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 div.container form fieldset div.element:not(:nth-child(6)) input {
