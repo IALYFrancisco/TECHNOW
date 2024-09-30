@@ -9,7 +9,7 @@ export class AdminallproductsComponent implements OnInit {
 
   constructor() { }
 
-  @Output() toggled:boolean = false
+  @Output() toggled:boolean = true
 
   ngOnInit(): void {
   }

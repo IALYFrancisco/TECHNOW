@@ -2,46 +2,63 @@
   <form action="" [formGroup]="addProductForm" (submit)="postMethod()">
     <fieldset>
       <legend>Adding product</legend>
-      <div class="element">
-        <label for="categorie">Categorie</label>
-        <select name="categorie" id="categorie" formControlName="categorie">
-          <option value="uc">Boititer</option>
-          <option value="motherboard">Carte mère</option>
-          <option value="cpu">Processeur</option>
-          <option value="ram">RAM</option>
-          <option value="gpu">Carte graphique</option>
-        </select>
+      <div class="up">
+        <div class="row">
+          <div class="element">
+            <label for="categorie">Categorie</label>
+            <select name="categorie" id="categorie" formControlName="categorie">
+              <option value="uc">Boititer</option>
+              <option value="motherboard">Carte mère</option>
+              <option value="cpu">Processeur</option>
+              <option value="ram">RAM</option>
+              <option value="gpu">Carte graphique</option>
+            </select>
+          </div>
+          <div class="element">
+            <label for="mark">Mark</label>
+            <input type="text" name="mark" id="mark" formControlName="mark">
+          </div>
+        </div>
+        <div class="row">
+          <div class="element">
+            <label for="model">Model</label>
+            <input type="text" name="model" id="model" formControlName="model">
+          </div>
+          <div class="element">
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" formControlName="price">
+          </div>
+        </div>
       </div>
-      <div class="element">
-        <label for="mark">Mark</label>
-        <input type="text" name="mark" id="mark" formControlName="mark">
-      </div>
-      <div class="element">
-        <label for="model">Model</label>
-        <input type="text" name="model" id="model" formControlName="model">
-      </div>
-      <div class="element">
-        <label for="price">Price</label>
-        <input type="number" name="price" id="price" formControlName="price">
-      </div>
-      <div class="element">
-        <label for="color">Color</label>
-        <input type="color" default="" name="color" id="color" formControlName="color">
-      </div>
-      <div class="element">
-        <label for="stock">Stock</label>
-        <input type="number" name="stock" id="stock" formControlName="stock">
-      </div>
-      <div class="element">
-        <label for="image_file_url">Image</label>
-        <input type="text" name="image_file_url" id="image_file_url" formControlName="image_file_url">
-      </div>
-      <div class="element">
-        <label for="description">Description</label>
-        <textarea name="description" id="description" formControlName="description"></textarea>
-      </div>
-      <div class="element">
-        <button type="submit">add</button>
+      <div class="down">
+        <div class="row">
+          <div class="element">
+            <label for="color">Color</label>
+            <input type="color" default="" name="color" id="color" formControlName="color">
+          </div>
+          <div class="element">
+            <label for="stock">Stock</label>
+            <input type="number" name="stock" id="stock" formControlName="stock">
+          </div>
+        </div>
+        <div class="row">
+          <div class="left_container">
+            <div class="element" style="width: 95%;">
+              <label for="image_file_url">Image</label>
+              <input type="text" name="image_file_url" id="image_file_url" formControlName="image_file_url">
+            </div>
+            <div class="element" style="width: 95%;">
+              <label for="description">Description</label>
+              <textarea name="description" id="description" formControlName="description"></textarea>
+            </div>
+          </div>
+          <div class="container_image">
+            <img src="../../../../assets/PRODUIT/PROCESSEUR/OIP (11).jpg" alt="">
+          </div>
+        </div>
+        <div class="element">
+          <button type="submit">add</button>
+        </div>
       </div>
     </fieldset>
   </form>
