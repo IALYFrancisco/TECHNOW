@@ -2,7 +2,7 @@ div.container {
     width: 100%;
     height: calc(100% - 60px);
     padding: 20px 40px;
-    font-family: poppins thin;
+    font-family: poppins;
 }
 
 div.container h3 {

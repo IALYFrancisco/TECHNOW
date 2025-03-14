@@ -7,7 +7,7 @@ article {
 }
 
 article p.title {
-    font-family: poppins regular;
+    font-family: Poppins;
     font-size: 15px;
     border-bottom: rebeccapurple 2px solid;
     width: 50px;
@@ -20,7 +20,7 @@ article ul {
 article ul li {
     width: 100%;
     height: max-content;
-    font-family: 'Poppins Light';
+    font-family: Poppins;
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -137,7 +137,7 @@ article:nth-child(2) ul li div.prices div div.less_number {
     justify-content: center;
     left: 3px;
     font-size: 10px;
-    font-family: poppins regular;
+    font-family: Poppins;
     border-radius: 2px;
 }
 
@@ -156,5 +156,5 @@ article:nth-child(2) ul li div.prices div input:focus {
 
 article:nth-child(2) ul li div.prices div input::placeholder {
     font-size: 11px;
-    font-family: poppins regular;
+    font-family: Poppins;
 }
