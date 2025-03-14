@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { PostProductService } from 'src/app/services/post-product.service';
 @Component({
   selector: 'app-addproduct',
   templateUrl: './addproduct.component.html',
@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddproductComponent implements OnInit {
 
-  constructor() { }
+  constructor( public post : PostProductService ) { }
 
   @Input() _toggled:any;
 
@@ -17,14 +17,19 @@ export class AddproductComponent implements OnInit {
     mark: new FormControl('', [Validators.required]),
     model: new FormControl('', [Validators.required]),
     price: new FormControl('', [Validators.required]),
-    color: new FormControl('', [Validators.required]),
+    color: new FormControl('#000000', [Validators.required]),
     stock: new FormControl('', [Validators.required]),
-    image: new FormControl('', [Validators.required]),
+    image_file_url: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
   })
 
-  getProductObject():void {
-    console.log(this.addProductForm.value)
+  postMethod(){
+    if(this.addProductForm.valid){
+      this.post.postProduct(this.addProductForm.value)
+      .subscribe((response:any)=>{
+        console.log(response)
+      })
+    }
   }
 
   ngOnInit(): void {

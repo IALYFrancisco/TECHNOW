@@ -1,7 +1,7 @@
 div.container {
   position: absolute;
-  top: 5%;
-  left: 45%;
+  top: 10%;
+  left: 38%;
   background-color: white;
   padding: 5px 3px 3px 3px;
   border-radius: 3px;
@@ -9,7 +9,7 @@ div.container {
 }
 
 div.container form{
-  width: 250px;
+  width: 400px;
   height: max-content;
 }
 
@@ -28,7 +28,7 @@ div.container form fieldset legend {
 }
 
 div.container form fieldset div.element {
-  width: 100%;
+  width: 49%;
   height: max-content;
   margin-bottom: 5px;
 }
@@ -53,7 +53,7 @@ div.container form fieldset div.element select:focus {
 div.container form fieldset div.element textarea {
   outline: none;
   width: 100%;
-  height: 50px;
+  height: 100px;
   resize: none;
   padding: 5px;
 }
@@ -64,7 +64,7 @@ div.container form fieldset div.element label {
 }
 
 div.container form fieldset div.element button {
-  width: 100%;
+  width: 204%;
   height: 35px;
   outline: none;
   border: none;
@@ -74,23 +74,22 @@ div.container form fieldset div.element button {
   font-size: 12px;
   border-radius: 3px;
   cursor:pointer;
+  margin: auto;
 }
 
-div.container form fieldset div.element:nth-child(6) {
-  display: flex;
+div.container form fieldset div.down div.element:nth-child(1) {
   align-items: center;
   justify-content: space-between;
   height: max-content;
-  margin-top: 20px;
 }
 
-div.container form fieldset div.element input[type='color'] {
-  width: 85%;
+div.container form fieldset div.down div.element input[type='color'] {
+  width: 100%;
   border: 1px rgb(219, 219, 219) solid;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  height: 35px;
+  height: 37px;
   border-radius: 3px;
 }
 
@@ -100,4 +99,29 @@ div.container form fieldset div.element select {
   outline: none;
   font-family: poppins;
   font-size: 13px;
+}
+
+div.container form fieldset div.up {
+  width: 100%;
+}
+
+div.container form fieldset div.up div.row
+,div.container form fieldset div.down div.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.container form fieldset div.down div.container_image {
+  width: 55%;
+  object-fit: cover;
+  display: flex;
+  border: 2px solid rebeccapurple;
+  border-radius: 4px;
+}
+
+div.container form fieldset div.down div.container_image img {
+  width: 100%;
+  border-radius: 3px;
 }
