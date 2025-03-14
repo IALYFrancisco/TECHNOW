@@ -1,14 +1,10 @@
 @font-face {
-    font-family: poppins;
-    src: url(assets/FONT/POPPINS/poppins.ttf);
-}
-
-@font-face {
     font-family: digital_7;
     src: url(assets/FONT/digital_7/digital-7.ttf);
 }
 
 * {
+    font-family: Poppins;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
