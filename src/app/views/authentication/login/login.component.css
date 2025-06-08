@@ -51,6 +51,21 @@ button:active {
     transition: 200ms;
 }
 
+a {
+    color: rebeccapurple;
+    font-size: 13px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button-container {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
 
 @media only screen and (max-width: 700px) {
     main {
