@@ -16,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddproductComponent } from './components/admindashboard/addproduct/addproduct.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthenticationComponent } from './views/authentication/authentication.component';
-import { LoginComponent } from './views/authentication/login/login.component'
+import { LoginComponent } from './views/authentication/login/login.component';
+import { RegisterComponent } from './views/authentication/register/register.component'
 
 
 const routes: Routes = [
@@ -59,7 +60,8 @@ const routes: Routes = [
     NavbarComponent,
     AddproductComponent,
     AuthenticationComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
