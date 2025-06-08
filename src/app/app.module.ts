@@ -23,7 +23,8 @@ const routes: Routes = [
     { path: '', component: AdminallproductsComponent },
     { path: 'settings', component: AdminsettingsComponent }
   ]
-  }
+  },
+  { path: 'authentication' }
 ]
 
 @NgModule({
