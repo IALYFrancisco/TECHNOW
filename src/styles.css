@@ -3,6 +3,11 @@
     src: url(assets/FONT/digital_7/digital-7.ttf);
 }
 
+@font-face {
+    font-family: Poppins;
+    src: url(assets/FONT/Poppins-Regular.ttf);
+}
+
 * {
     font-family: Poppins;
     margin: 0;

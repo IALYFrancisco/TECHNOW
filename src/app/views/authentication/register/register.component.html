@@ -1,0 +1,20 @@
+<main>
+    <form [formGroup]="newUser" (submit)="Register()">
+        <h2>Inscription</h2>
+        <section>
+            <label for="name">Votre nom :</label>
+            <input type="text" required placeholder="John Doe" id="name" formControlName="name">
+        </section>
+        <section>
+            <label for="email">Votre email :</label>
+            <input type="email" required placeholder="johndoe@example.com" id="email" formControlName="email">
+        </section>
+        <section>
+            <label for="password">Votre mot de passe :</label>
+            <input type="password" required placeholder="choisissez des mots de passe robustes" id="password" formControlName="password">
+        </section>
+        <section class="button-container">
+            <button type="submit">S'inscrire</button>
+        </section>
+    </form>
+</main>

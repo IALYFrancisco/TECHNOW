@@ -14,15 +14,39 @@ import { AdminsettingsComponent } from './components/admindashboard/adminsetting
 import { NavbarComponent } from './components/admindashboard/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddproductComponent } from './components/admindashboard/addproduct/addproduct.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthenticationComponent } from './views/authentication/authentication.component';
+import { LoginComponent } from './views/authentication/login/login.component';
+import { RegisterComponent } from './views/authentication/register/register.component'
 
 
 const routes: Routes = [
-  { path: '', component:AccueilComponent },
-  { path: 'admindashboard', component: AdmindashboardComponent, children: [
-    { path: '', component: AdminallproductsComponent },
-    { path: 'settings', component: AdminsettingsComponent }
-  ]
+  { path: '',
+    component:AccueilComponent
+  },
+  { 
+    path: 'admindashboard', component: AdmindashboardComponent, children: [
+    { 
+      path: '',
+      component: AdminallproductsComponent
+    },
+    {
+      path: 'settings',
+      component: AdminsettingsComponent
+    }]
+  },
+  { path: 'authentication',
+    component: AuthenticationComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
+      }
+    ]
   }
 ]
 
@@ -38,7 +62,10 @@ const routes: Routes = [
     SidebarComponent,
     AdminallproductsComponent,
     NavbarComponent,
-    AddproductComponent
+    AddproductComponent,
+    AuthenticationComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
