@@ -14,7 +14,8 @@ import { AdminsettingsComponent } from './components/admindashboard/adminsetting
 import { NavbarComponent } from './components/admindashboard/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddproductComponent } from './components/admindashboard/addproduct/addproduct.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthenticationComponent } from './views/authentication/authentication.component'
 
 
 const routes: Routes = [
@@ -39,7 +40,8 @@ const routes: Routes = [
     SidebarComponent,
     AdminallproductsComponent,
     NavbarComponent,
-    AddproductComponent
+    AddproductComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
