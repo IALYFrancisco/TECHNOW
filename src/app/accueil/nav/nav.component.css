@@ -82,3 +82,20 @@ nav ul li:nth-child(2) span {
     align-items: center;
     justify-content: center;
 }
+
+button {
+    padding: 8px 12px;
+    background-color: white;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    border-radius: 3px;
+    color: rebeccapurple;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+button:active {
+    transform: scale(0.9);
+    transition: 200ms;
+}
