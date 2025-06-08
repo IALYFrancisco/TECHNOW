@@ -21,12 +21,9 @@ export class RegisterComponent implements OnInit {
   })
 
   Register():void{
-
-    let _response
-
     if(this.newUser.valid){
       this.http.post('http://localhost:3000/authentication/register', this.newUser.value)
-        .subscribe((_response: any) => { console.log(_response) })
+        .subscribe((response: any) => { console.log(response.status) })
     }
   }
 
