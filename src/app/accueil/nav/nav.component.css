@@ -11,11 +11,12 @@ nav {
     margin-bottom: 50px;
 }
 
-nav span {
+nav span a {
     font-family: digital_7;
     font-size: 30px;
     letter-spacing: 3px;
     cursor: pointer;
+    color: white;
 }
 
 nav ul {
