@@ -2,16 +2,19 @@
     <form>
         <h2>Inscription</h2>
         <section>
+            <label for="name">Votre nom :</label>
+            <input type="text" required placeholder="John Doe" id="name">
+        </section>
+        <section>
             <label for="email">Votre email :</label>
-            <input type="email" required placeholder="user@example.com" id="email">
+            <input type="email" required placeholder="johndoe@example.com" id="email">
         </section>
         <section>
             <label for="password">Votre mot de passe :</label>
-            <input type="password" required placeholder="saisissez votre mot de passe" id="password">
+            <input type="password" required placeholder="choisissez des mots de passe robustes" id="password">
         </section>
         <section class="button-container">
-            <button>Connexion</button>
-            <a routerLink="/authenication/register">Vous avez déjà un compte ?</a>
+            <button type="submit">S'inscrire</button>
         </section>
     </form>
 </main>
