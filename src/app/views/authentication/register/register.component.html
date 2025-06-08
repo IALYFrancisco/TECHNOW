@@ -1,5 +1,5 @@
 <main>
-    <form>
+    <form [formGroup]="newUser" (submit)="Register()">
         <h2>Inscription</h2>
         <section>
             <label for="name">Votre nom :</label>

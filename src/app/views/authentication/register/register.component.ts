@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor( private http: HttpClient ) { }
 
   ngOnInit(): void {
   }
@@ -17,7 +18,16 @@ export class RegisterComponent implements OnInit {
     name: new FormControl(null, [Validators.required]),
     email: new FormControl(null, [Validators.required]),
     password: new FormControl(null, [Validators.required])
-  }) 
+  })
 
+  Register():void{
+
+    let _response
+
+    if(this.newUser.valid){
+      this.http.post('http://localhost:3000/authentication/register', this.newUser.value)
+        .subscribe((_response: any) => { console.log(_response) })
+    }
+  }
 
 }
