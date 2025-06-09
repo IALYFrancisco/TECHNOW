@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserIsConnectedService } from 'src/app/services/user-is-connected.service';
 
 @Component({
   selector: 'app-nav',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  router: any;
 
-  constructor() { }
+  constructor( public connexion: UserIsConnectedService) { }
+
+  isConnected = this.connexion.userIsConnected()
 
   ngOnInit(): void {
   }
