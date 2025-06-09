@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserIsConnectedService {
 
-  constructor() { }
+  constructor( ) { }
 
   userIsConnected():boolean {
     let accessToken: any = localStorage.getItem('accessToken') || null
