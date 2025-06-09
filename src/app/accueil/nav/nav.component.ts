@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserIsConnectedService } from 'src/app/services/user-is-connected.service';
 
 @Component({
@@ -8,11 +10,18 @@ import { UserIsConnectedService } from 'src/app/services/user-is-connected.servi
 })
 export class NavComponent implements OnInit {
 
-  constructor( public connexion: UserIsConnectedService) { }
+  constructor( public connexion: UserIsConnectedService, private http: HttpClient, public router: Router) { }
 
   isConnected = this.connexion.userIsConnected()
 
   ngOnInit(): void {
+  }
+
+  LogOut():void{
+    localStorage.removeItem('user')
+    localStorage.removeItem('accessToken')
+    this.http.post('http://localhost:3000/authentication/logout', {})
+      .subscribe()
   }
 
 }
