@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   Login():void{
     if(this.user.valid){
-      this.http.post('http://localhost:3000/authentication/login', this.user.value)
+      this.http.post('http://localhost:3000/authentication/login', this.user.value, { withCredentials: true })
         .subscribe((response:any) => { 
           if(response.status == 200){
             this.router.navigate(['/'])
