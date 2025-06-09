@@ -14,6 +14,8 @@ export class RegisterComponent implements OnInit {
 
   result:any
 
+  request:boolean = false
+
   ngOnInit(): void {
   }
 

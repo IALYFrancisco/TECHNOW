@@ -52,6 +52,11 @@ button img {
     width: 22px;
     margin-right: 8px;
     animation: spin 1.5s infinite ease-in-out;
+    display: none;
+}
+
+button img.active {
+    display: initial;
 }
 
 @keyframes spin {
