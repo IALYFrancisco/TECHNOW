@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
       this.http.post('http://localhost:3000/authentication/login', this.user.value, { withCredentials: true })
         .subscribe((response:any) => { 
           if(response.status == 200){
+            localStorage.setItem('accessToken', response.accessToken)
+            localStorage.setItem('user', JSON.stringify(response.user))
             this.router.navigate(['/'])
           }
          })
