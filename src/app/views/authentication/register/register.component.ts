@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-register',
@@ -27,7 +28,7 @@ export class RegisterComponent implements OnInit {
 
   Register():void{
     if(this.newUser.valid){
-      this.http.post('http://localhost:3000/authentication/register', this.newUser.value)
+      this.http.post(`${environment.API_BASE_URL}/authentication/register`, this.newUser.value)
         .subscribe((response: any) => { 
           this.result = response;
           if(this.result.status == 201){
