@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -22,15 +23,15 @@ export class LoginComponent implements OnInit {
 
   Login():void{
     if(this.user.valid){
-      this.http.post('http://localhost:3000/authentication/login', this.user.value)
+      this.http.post(`${environment.API_BASE_URL}/authentication/login`, this.user.value, { withCredentials: true })
         .subscribe((response:any) => { 
           if(response.status == 200){
+            localStorage.setItem('accessToken', response.accessToken)
+            localStorage.setItem('user', JSON.stringify(response.user))
             this.router.navigate(['/'])
           }
          })
     }
   }
-
-
 
 }

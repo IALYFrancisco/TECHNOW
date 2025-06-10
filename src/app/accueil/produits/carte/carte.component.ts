@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { UserIsConnectedService } from 'src/app/services/user-is-connected.service';
 
 @Component({
   selector: 'app-carte',
@@ -6,8 +7,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./carte.component.css']
 })
 export class CarteComponent implements OnInit {
+  
+  constructor( public connexion: UserIsConnectedService ) { }
 
-  userNotConnected:boolean = true;
+  isConnected: boolean = this.connexion.userIsConnected()
 
   products:any = [
     {name: 'Boîtier noir', img_url:'../../../assets/PRODUIT/BOITIER/CAA-ANTNX420.jpg'},
@@ -18,7 +21,6 @@ export class CarteComponent implements OnInit {
     {name: 'Processeur i5 10Gen', img_url:'../../../assets/PRODUIT/PROCESSEUR/OIP (3).jpg'},
   ];
 
-  constructor() { }
 
   ngOnInit(): void {
   }
