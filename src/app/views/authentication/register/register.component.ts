@@ -27,11 +27,18 @@ export class RegisterComponent implements OnInit {
   Register():void{
     if(this.newUser.valid){
       this.http.post(`${environment.API_BASE_URL}/authentication/register`, this.newUser.value, { observe: 'response' })
-        .subscribe((response: any) => { 
-          if(response.status == 201){
-            this.router.navigate(['/authentication/login'])
+        .subscribe(
+        {
+          next: (response) => {
+            if(response.status == 201){
+              this.router.navigate(['/authentication/login'])
+            }
+          },
+          error: (err) => {
+            console.log(err)
           }
-        })
+        }
+      )
     }
   }
 
