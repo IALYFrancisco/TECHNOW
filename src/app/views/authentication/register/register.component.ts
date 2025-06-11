@@ -13,8 +13,6 @@ export class RegisterComponent implements OnInit {
 
   constructor( private http: HttpClient, public router: Router ) { }
 
-  result:any
-
   request:boolean = false
 
   ngOnInit(): void {
@@ -28,13 +26,19 @@ export class RegisterComponent implements OnInit {
 
   Register():void{
     if(this.newUser.valid){
-      this.http.post(`${environment.API_BASE_URL}/authentication/register`, this.newUser.value)
-        .subscribe((response: any) => { 
-          this.result = response;
-          if(this.result.status == 201){
-            this.router.navigate(['/authentication/login'])
+      this.http.post(`${environment.API_BASE_URL}/authentication/register`, this.newUser.value, { observe: 'response' })
+        .subscribe(
+        {
+          next: (response) => {
+            if(response.status == 201){
+              this.router.navigate(['/authentication/login'])
+            }
+          },
+          error: (err) => {
+            console.log(err)
           }
-        })
+        }
+      )
     }
   }
 

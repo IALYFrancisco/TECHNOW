@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserIsConnectedService } from 'src/app/services/user-is-connected.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-nav',
@@ -20,7 +21,7 @@ export class NavComponent implements OnInit {
   LogOut():void{
     localStorage.removeItem('user')
     localStorage.removeItem('accessToken')
-    this.http.post('http://localhost:3000/authentication/logout', {})
+    this.http.post(`${environment.API_BASE_URL}/authentication/logout`, {}, { withCredentials: true })
       .subscribe()
   }
 
