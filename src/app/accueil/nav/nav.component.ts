@@ -20,7 +20,7 @@ export class NavComponent implements OnInit {
   LogOut():void{
     localStorage.removeItem('user')
     localStorage.removeItem('accessToken')
-    this.http.post('http://localhost:3000/authentication/logout', {})
+    this.http.post('http://localhost:3000/authentication/logout', {}, { withCredentials: true })
       .subscribe()
   }
 
