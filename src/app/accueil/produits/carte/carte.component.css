@@ -29,16 +29,6 @@ div.parent div.carte div.img img {
     border-radius: 2px;
 }
 
-div.parent div.carte div.name {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: 30px;
-    font-family: Poppins;
-    font-size: 13px;
-    padding-left: 8px;
-}
-
 div.parent div.carte div.action {
     width: 100%;
     display: flex;
@@ -138,4 +128,26 @@ div.informations div.input input {
 
 div.informations div.input input:focus {
     border: 2px rebeccapurple solid;
+}
+
+.mark_model {
+    font-size: 13px;
+    padding-left: 8px;
+    color: rebeccapurple;
+}
+
+.categorie {
+    font-size: 13px;
+    padding-left: 8px;
+    color: red;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 13px;
+    padding-left: 8px;
+    margin-bottom: 5px;
+    color: rebeccapurple;
+    font-weight: 600;
 }

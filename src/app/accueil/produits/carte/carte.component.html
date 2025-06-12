@@ -11,8 +11,15 @@
         <div class="img">
             <img src="" alt="" [src] = 'product.img_url'>
         </div>
-        <div class="name">
-            {{ product.name}}
+        <div class="categorie">
+            {{ product.categorie}}
+        </div>
+        <div class="mark_model">
+            {{ product.mark}} {{ product.model}}
+        </div>
+        <div></div>
+        <div class="price">
+            Ar {{ product.price }}
         </div>
         <div class="action">
             <button type="button" [ngClass]="{ 'disabled' : !isConnected }">

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserIsConnectedService } from 'src/app/services/user-is-connected.service';
 
 @Component({
@@ -13,12 +13,12 @@ export class CarteComponent implements OnInit {
   isConnected: boolean = this.connexion.userIsConnected()
 
   products:any = [
-    {name: 'Boîtier noir', img_url:'../../../assets/PRODUIT/BOITIER/CAA-ANTNX420.jpg'},
-    {name: 'Carte graphique', img_url:'../../../assets/PRODUIT/CARTE-GRAPHIQUE/51oHZsKzIvL.jpg'},
-    {name: 'Carte mère', img_url:'../../../assets/PRODUIT/CARTE-MERE/R (4).jpg'},
-    {name: 'Ram DDR4', img_url:'../../../assets/PRODUIT/MEMOIRE-VIVE/OIP (7).jpg'},
-    {name: 'Boîtier blanc', img_url:'../../../assets/PRODUIT/BOITIER/LD0005954620.jpg'},
-    {name: 'Processeur i5 10Gen', img_url:'../../../assets/PRODUIT/PROCESSEUR/OIP (3).jpg'},
+    { img_url:'../../../assets/PRODUIT/BOITIER/CAA-ANTNX420.jpg', price: '600.000', categorie: 'UC', mark: 'Corsaire', model: 'Black Panthère'},
+    { img_url:'../../../assets/PRODUIT/CARTE-GRAPHIQUE/51oHZsKzIvL.jpg', price: '5.000.000', categorie: 'GPU', mark: 'Nvidia', model: 'GTX'},
+    { img_url:'../../../assets/PRODUIT/CARTE-MERE/R (4).jpg', price: '800.000', categorie: 'Carte mère', mark: 'Corsaire', model: 'Rost Ghost'},
+    { img_url:'../../../assets/PRODUIT/MEMOIRE-VIVE/OIP (7).jpg', price: '400.000', categorie: 'RAM', mark: 'Water Coolin', model: 'RGB'},
+    { img_url:'../../../assets/PRODUIT/BOITIER/LD0005954620.jpg', price: '800.000', categorie: 'UC', mark:'Corsaire', model: 'Angel'},
+    { img_url:'../../../assets/PRODUIT/PROCESSEUR/OIP (3).jpg', price: '900.000', categorie: 'CPU', mark: 'Intel', model: 'Core i5'},
   ];
 
 
