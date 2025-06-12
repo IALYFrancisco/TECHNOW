@@ -22,7 +22,7 @@
             Ar {{ product.price }}
         </div>
         <div class="action">
-            <button type="button" [ngClass]="{ 'disabled' : !isConnected }">
+            <button type="button" [ngClass]="{ 'disabled' : !isConnected }" (click)="addToCart(product._id)">
                 add to cart
                 <img src="../../../../assets/ICON/add_to_cart.png" alt="">
             </button>

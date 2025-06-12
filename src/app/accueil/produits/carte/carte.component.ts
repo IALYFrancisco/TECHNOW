@@ -13,16 +13,22 @@ export class CarteComponent implements OnInit {
   isConnected: boolean = this.connexion.userIsConnected()
 
   products:any = [
-    { img_url:'../../../assets/PRODUIT/BOITIER/CAA-ANTNX420.jpg', price: '600.000', categorie: 'UC', mark: 'Corsaire', model: 'Black Panthère'},
-    { img_url:'../../../assets/PRODUIT/CARTE-GRAPHIQUE/51oHZsKzIvL.jpg', price: '5.000.000', categorie: 'GPU', mark: 'Nvidia', model: 'GTX'},
-    { img_url:'../../../assets/PRODUIT/CARTE-MERE/R (4).jpg', price: '800.000', categorie: 'Carte mère', mark: 'Corsaire', model: 'Rost Ghost'},
-    { img_url:'../../../assets/PRODUIT/MEMOIRE-VIVE/OIP (7).jpg', price: '400.000', categorie: 'RAM', mark: 'Water Coolin', model: 'RGB'},
-    { img_url:'../../../assets/PRODUIT/BOITIER/LD0005954620.jpg', price: '800.000', categorie: 'UC', mark:'Corsaire', model: 'Angel'},
-    { img_url:'../../../assets/PRODUIT/PROCESSEUR/OIP (3).jpg', price: '900.000', categorie: 'CPU', mark: 'Intel', model: 'Core i5'},
+    { _id: 0, img_url:'../../../assets/PRODUIT/BOITIER/CAA-ANTNX420.jpg', price: '600.000', categorie: 'UC', mark: 'Corsaire', model: 'Black Panthère'},
+    { _id: 1, img_url:'../../../assets/PRODUIT/CARTE-GRAPHIQUE/51oHZsKzIvL.jpg', price: '5.000.000', categorie: 'GPU', mark: 'Nvidia', model: 'GTX'},
+    { _id: 2, img_url:'../../../assets/PRODUIT/CARTE-MERE/R (4).jpg', price: '800.000', categorie: 'Carte mère', mark: 'Corsaire', model: 'Rost Ghost'},
+    { _id: 3, img_url:'../../../assets/PRODUIT/MEMOIRE-VIVE/OIP (7).jpg', price: '400.000', categorie: 'RAM', mark: 'Water Coolin', model: 'RGB'},
+    { _id: 4, img_url:'../../../assets/PRODUIT/BOITIER/LD0005954620.jpg', price: '800.000', categorie: 'UC', mark:'Corsaire', model: 'Angel'},
+    { _id: 5, img_url:'../../../assets/PRODUIT/PROCESSEUR/OIP (3).jpg', price: '900.000', categorie: 'CPU', mark: 'Intel', model: 'Core i5'},
   ];
 
 
   ngOnInit(): void {
+  }
+
+  addToCart(PI: any):void{
+    if(this.connexion.userIsConnected()){
+      console.log(PI)
+    }
   }
 
 }
