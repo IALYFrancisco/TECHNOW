@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddToCartService } from 'src/app/services/add-to-cart.service';
 import { UserIsConnectedService } from 'src/app/services/user-is-connected.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserIsConnectedService } from 'src/app/services/user-is-connected.servi
 })
 export class CarteComponent implements OnInit {
   
-  constructor( public connexion: UserIsConnectedService ) { }
+  constructor( public connexion: UserIsConnectedService, private cart: AddToCartService ) { }
 
   isConnected: boolean = this.connexion.userIsConnected()
 
@@ -25,9 +26,9 @@ export class CarteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addToCart(PI: any):void{
+  addToCart(project: any):void{
     if(this.connexion.userIsConnected()){
-      console.log(PI)
+      this.cart.Add(project)
     }
   }
 

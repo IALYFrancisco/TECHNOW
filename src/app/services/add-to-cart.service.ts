@@ -12,7 +12,9 @@ export class AddToCartService {
     if(!cart){
       localStorage.setItem('cart', JSON.stringify([project]))
     }else{
-      cart = JSON.parse(cart).push(project)
+      let _cart = JSON.parse(cart)
+      _cart.push(project)
+      localStorage.setItem('cart', JSON.stringify(_cart))
     }
   }
 
