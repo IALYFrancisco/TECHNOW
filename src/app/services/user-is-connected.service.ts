@@ -11,9 +11,7 @@ export class UserIsConnectedService {
 
   async userIsConnected(): Promise<boolean> {
     let at: any = localStorage.getItem('accessToken') || null
-
     this.http.post(`${environment.API_BASE_URL}/authentication/token/verify`, { accessToken: at }, { withCredentials: true })
-
     let _user: any = localStorage.getItem('user') || null
     let user = JSON.parse(_user)
     if(user && at){
@@ -22,5 +20,4 @@ export class UserIsConnectedService {
       return false
     }
   }
-
 }
