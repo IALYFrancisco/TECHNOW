@@ -9,9 +9,10 @@ export class UserIsConnectedService {
 
   constructor( private http: HttpClient ) { }
 
-  async userIsConnected(): Promise<boolean> {
+  userIsConnected(): boolean {
     let at: any = localStorage.getItem('accessToken') || null
-    this.http.post(`${environment.API_BASE_URL}/authentication/token/verify`, { accessToken: at }, { withCredentials: true })
+    this.http.post(`${environment.API_BASE_URL}/authentication/token/verify`, { accessToken: at }, { withCredentials: true, observe: 'response' })
+      .subscribe()
     let _user: any = localStorage.getItem('user') || null
     let user = JSON.parse(_user)
     if(user && at){
