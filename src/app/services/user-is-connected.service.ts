@@ -9,16 +9,11 @@ export class UserIsConnectedService {
 
   constructor( private http: HttpClient ) { }
 
-  userIsConnected: boolean =  false
-
   RefreshToken(): void {
     this.http.post(`${environment.API_BASE_URL}/authentication/token`, null, { withCredentials: true, observe: 'response' })
       .subscribe({
-        next: (response) => {
-          this.userIsConnected = true
-        },
-        error: (err) => {
-          this.userIsConnected = false
+        next: (response: any) => {
+          localStorage.setItem('accessToken', response.body?.accessToken)
         }
       })
   }
