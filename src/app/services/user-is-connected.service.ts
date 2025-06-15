@@ -9,10 +9,18 @@ export class UserIsConnectedService {
 
   constructor( private http: HttpClient ) { }
 
-  userIsConnected(): boolean {
+  userIsConnected: boolean =  false
+
+  RefreshToken(): void {
     this.http.post(`${environment.API_BASE_URL}/authentication/token`, null, { withCredentials: true, observe: 'response' })
-      .subscribe((response) => { console.log(response) })
-    return false
+      .subscribe({
+        next: (response) => {
+          this.userIsConnected = true
+        },
+        error: (err) => {
+          this.userIsConnected = false
+        }
+      })
   }
 
 }
