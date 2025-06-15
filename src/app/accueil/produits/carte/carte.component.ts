@@ -11,7 +11,7 @@ export class CarteComponent implements OnInit {
   
   constructor( public connexion: UserIsConnectedService, private cart: AddToCartService ) { }
 
-  isConnected: boolean = this.connexion.userIsConnected()
+  isConnected: Promise<boolean> = this.connexion.userIsConnected()
 
   products:any = [
     { _id: 0, img_url:'../../../assets/PRODUIT/BOITIER/CAA-ANTNX420.jpg', price: '600.000', categorie: 'UC', mark: 'Corsaire', model: 'Black Panthère'},
@@ -26,8 +26,8 @@ export class CarteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addToCart(project: any):void{
-    if(this.connexion.userIsConnected()){
+  async addToCart(project: any):Promise<void>{
+    if(await this.connexion.userIsConnected()){
       this.cart.Add(project)
     }
   }
