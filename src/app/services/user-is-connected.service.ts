@@ -10,7 +10,7 @@ export class UserIsConnectedService {
   constructor( private http: HttpClient ) { }
 
   userIsConnected(): boolean {
-    this.http.post(`${environment.API_BASE_URL}/authentication/token/verify`, null, { withCredentials: true, observe: 'response' })
+    this.http.post(`${environment.API_BASE_URL}/authentication/token`, null, { withCredentials: true, observe: 'response' })
       .subscribe((response) => { console.log(response) })
     return false
   }
