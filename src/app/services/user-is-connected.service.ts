@@ -14,20 +14,6 @@ export class UserIsConnectedService {
   async userIsConnected(): Promise<boolean> {
     let at: any = localStorage.getItem('accessToken') || null
     await this.http.post(`${environment.API_BASE_URL}/authentication/token/verify`, { accessToken: at }, { withCredentials: true, observe: 'response' })
-      .subscribe({
-        next: (response) => {
-          if(response.status == 200){
-            this.result = true
-          }
-          if(response.status == 201){
-            this.result = true
-          }
-            this.result = false
-        },
-        error: (err) => {
-          this.result = false
-        }
-      })
-      return await this.result
+      .subscribe()
   }
 }
