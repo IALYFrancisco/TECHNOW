@@ -12,8 +12,8 @@ export class UserIsConnectedService {
   userIsConnected(): boolean {
     let at: any = localStorage.getItem('accessToken') || null
     this.http.post(`${environment.API_BASE_URL}/authentication/token/verify`, { accessToken: at }, { withCredentials: true, observe: 'response' })
-      .subscribe()
+      .subscribe((response) => { console.log(response) })
     return false
   }
-  
+
 }
