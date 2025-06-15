@@ -9,11 +9,11 @@ export class UserIsConnectedService {
 
   constructor( private http: HttpClient ) { }
 
-  result: boolean = false
-
-userIsConnected(): void {
+  userIsConnected(): boolean {
     let at: any = localStorage.getItem('accessToken') || null
     this.http.post(`${environment.API_BASE_URL}/authentication/token/verify`, { accessToken: at }, { withCredentials: true, observe: 'response' })
       .subscribe()
+    return false
   }
+  
 }
