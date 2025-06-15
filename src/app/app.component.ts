@@ -16,8 +16,8 @@ export class AppComponent implements OnInit {
     //Add 'implements OnInit' to the class.
     this.connexion.RefreshToken()
 
-    setInterval( async ()=>{
-      await this.connexion.RefreshToken()
+    setInterval( ()=>{
+      this.connexion.RefreshToken()
     }, 13 * 60 * 1000)
 
   }
