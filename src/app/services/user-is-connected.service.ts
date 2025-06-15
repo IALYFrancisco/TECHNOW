@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,9 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class UserIsConnectedService {
 
-  constructor( ) { }
+  constructor( private http: HttpClient ) { }
 
-  userIsConnected():boolean {
+  async userIsConnected(): Promise<boolean> {
     let accessToken: any = localStorage.getItem('accessToken') || null
     let _user: any = localStorage.getItem('user') || null
     let user = JSON.parse(_user)
