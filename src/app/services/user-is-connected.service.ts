@@ -12,7 +12,7 @@ export class UserIsConnectedService {
 
   refresh(): Observable<any>{
     return this.http.post<{ accessToken: string }>(
-      `${environment}/authentication/token`,
+      `${environment.API_BASE_URL}/authentication/token`,
       {},
       { withCredentials: true }
     ).pipe(
