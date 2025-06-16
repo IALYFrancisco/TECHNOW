@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class UserIsConnectedService {
 
-  private isLoggedInSubject = new BehaviorSubject<boolean>(false)
+  public isLoggedInSubject = new BehaviorSubject<boolean>(false)
   
   isLoggedIn$: Observable<boolean> = this.isLoggedInSubject.asObservable()
 
@@ -22,6 +22,7 @@ export class UserIsConnectedService {
     ).pipe(
       tap((resposne) => { 
         localStorage.setItem('accessToken', resposne.accessToken)
+        this.isLoggedInSubject.next(true)
        })
     )
   }

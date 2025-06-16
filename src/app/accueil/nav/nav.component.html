@@ -4,6 +4,6 @@
             TECHNOW
         </a>
     </span>
-    <button *ngIf="true" routerLink="/authentication/login">Se connecter</button>
-    <button *ngIf="true" (click)="LogOut()">Se déconnecter</button>
+    <button *ngIf="!(connected | async)" routerLink="/authentication/login">Se connecter</button>
+    <button *ngIf="connected | async" (click)="LogOut()">Se déconnecter</button>
 </nav>
