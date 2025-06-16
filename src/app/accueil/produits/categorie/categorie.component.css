@@ -35,15 +35,15 @@ article ul li span {
     align-items: center;
 }
 
-article ul li div.color_option span:nth-child(2),
-article ul li div.price_option span:nth-child(2) {
+article ul li .color_option span:nth-child(2),
+article ul li .price_option span:nth-child(2) {
     width: 100%;
     height: 100%;
     display: flex;
     padding-left: 15%;
 }
 
-article ul li div.price_option span:nth-child(2) {
+article ul li .price_option span:nth-child(2) {
     margin-left: 3px;
 }
 
@@ -69,24 +69,24 @@ article:nth-child(2) ul li.toggled {
     height: max-content;
 }
 
-article:nth-child(2) ul li div:nth-child(1) span:nth-child(2) img {
+article:nth-child(2) ul li :nth-child(1) span:nth-child(2) img {
     transition: 0.125s;
 }
 
-article:nth-child(2) ul li div:nth-child(1) span:nth-child(2) img.toggled {
+article:nth-child(2) ul li :nth-child(1) span:nth-child(2) img.toggled {
     transform: rotateZ(90deg);
     transition: 0.125s;
 }
 
-article:nth-child(2) ul li div.color_option,
-article:nth-child(2) ul li div.price_option{
+article:nth-child(2) ul li .color_option,
+article:nth-child(2) ul li .price_option{
     width: 100%;
     display: flex;
     align-items: center;
     height: max-content;
 }
 
-article:nth-child(2) ul li div.colors{
+article:nth-child(2) ul li .colors{
     width: 100%;
     height: max-content;
     display: flex;
@@ -97,7 +97,7 @@ article:nth-child(2) ul li div.colors{
     background-color: rgb(226, 226, 226);
 }
 
-article:nth-child(2) ul li div.colors div.color {
+article:nth-child(2) ul li .colors .color {
     width: 13px;
     height: 13px;
     background-color: green;
@@ -105,16 +105,16 @@ article:nth-child(2) ul li div.colors div.color {
     border-radius: 50%;
 }
 
-article:nth-child(2) ul li div.prices {
+article:nth-child(2) ul li .prices {
     width: 100%;
     height: max-content;
     background-color: rgb(226, 226, 226);
     padding: 6px 0;
 }
 
-article:nth-child(2) ul li div.prices div.more,
-article:nth-child(2) ul li div.prices div.equal,
-article:nth-child(2) ul li div.prices div.less {
+article:nth-child(2) ul li .prices .more,
+article:nth-child(2) ul li .prices .equal,
+article:nth-child(2) ul li .prices .less {
     position: relative;
     width: 90%;
     height: 30px;
@@ -123,9 +123,9 @@ article:nth-child(2) ul li div.prices div.less {
     align-items: center;
 }
 
-article:nth-child(2) ul li div.prices div div.more_number,
-article:nth-child(2) ul li div.prices div div.equal_number,
-article:nth-child(2) ul li div.prices div div.less_number {
+article:nth-child(2) ul li .prices  .more_number,
+article:nth-child(2) ul li .prices  .equal_number,
+article:nth-child(2) ul li .prices  .less_number {
     position: absolute;
     width: 40px;
     height: 80%;
@@ -140,7 +140,7 @@ article:nth-child(2) ul li div.prices div div.less_number {
     border-radius: 2px;
 }
 
-article:nth-child(2) ul li div.prices div input {
+article:nth-child(2) ul li .prices  input {
     width: 100%;
     height: 100%;
     outline: none;
@@ -149,11 +149,11 @@ article:nth-child(2) ul li div.prices div input {
     border-radius: 3px;
 }
 
-article:nth-child(2) ul li div.prices div input:focus {
+article:nth-child(2) ul li .prices  input:focus {
     border: 1px rebeccapurple solid;
 }
 
-article:nth-child(2) ul li div.prices div input::placeholder {
+article:nth-child(2) ul li .prices  input::placeholder {
     font-size: 11px;
     font-family: Poppins;
 }
