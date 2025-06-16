@@ -1,4 +1,4 @@
-div.parent {
+ul {
     background:rgb(245, 245, 245);
     width: 100%;
     height: max-content;
@@ -10,7 +10,7 @@ div.parent {
     margin-top: 20px;
 }
 
-div.parent div.carte {
+ul div.carte {
     width: 170px;
     height: max-content;
     box-shadow: 0 0 5px #83838379;
@@ -18,19 +18,19 @@ div.parent div.carte {
     padding: 2px 2px 12px 2px;
 }
 
-div.parent div.carte div.img {
+ul div.carte div.img {
     width: 100%;
     height: 200px;
 }
 
-div.parent div.carte div.img img {
+ul div.carte div.img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 2px;
 }
 
-div.parent div.carte div.action {
+ul div.carte div.action {
     width: 100%;
     display: flex;
     align-items: center;
@@ -39,19 +39,19 @@ div.parent div.carte div.action {
     padding-right: 10px;
 }
 
-div.parent div.carte div.action img {
+ul div.carte div.action img {
     width: 35px;
 }
 
-div.parent div.carte div.action img:hover {
+ul div.carte div.action img:hover {
     cursor: pointer;
 }
 
-div.parent div.carte div.action img:active {
+ul div.carte div.action img:active {
     transform: scale(0.9);
 }
 
-div.parent div.carte div.action button {
+ul div.carte div.action button {
     width: 100%;
     height: 30px;
     cursor: pointer;
@@ -68,16 +68,16 @@ div.parent div.carte div.action button {
     justify-content: center;
 }
 
-div.parent div.carte div.action button img {
+ul div.carte div.action button img {
     width: 15px;
     margin-left: 5px;
 }
 
-div.parent div.carte div.action button:active {
+ul div.carte div.action button:active {
     transform: scale(0.98);
 }
 
-div.parent div.carte div.action button.disabled {
+ul div.carte div.action button.disabled {
     background-color: #a4a4a4;
     transform: none;
 }
