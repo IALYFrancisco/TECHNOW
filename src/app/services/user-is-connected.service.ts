@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -9,6 +9,10 @@ import { environment } from 'src/environments/environment';
 export class UserIsConnectedService {
 
   constructor( private http: HttpClient ) { }
+
+  private isLoggedInSubject = new BehaviorSubject<boolean>(false)
+  
+  isLoggedIn$: Observable<boolean> = this.isLoggedInSubject.asObservable()
 
   refresh(): Observable<any>{
     return this.http.post<{ accessToken: string }>(
