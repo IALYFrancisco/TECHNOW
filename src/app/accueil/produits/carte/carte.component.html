@@ -7,7 +7,7 @@
     </div>
 </div>
 <ul>
-    <div class="carte" *ngFor="let product of products">
+    <li *ngFor="let product of products">
         <div class="img">
             <img src="" alt="" [src] = 'product.img_url'>
         </div>
@@ -27,5 +27,5 @@
                 <img src="../../../../assets/ICON/add_to_cart.png" alt="">
             </button>
         </div>
-    </div>
+    </li>
 </ul>
