@@ -11,8 +11,6 @@ export class CarteComponent implements OnInit {
   
   constructor( public connexion: UserIsConnectedService, private cart: AddToCartService ) { }
 
-  isConnected: boolean = this.connexion.RefreshToken()
-
   products:any = [
     { _id: 0, img_url:'../../../assets/PRODUIT/BOITIER/CAA-ANTNX420.jpg', price: '600.000', categorie: 'UC', mark: 'Corsaire', model: 'Black Panthère'},
     { _id: 1, img_url:'../../../assets/PRODUIT/CARTE-GRAPHIQUE/51oHZsKzIvL.jpg', price: '5.000.000', categorie: 'GPU', mark: 'Nvidia', model: 'GTX'},
@@ -27,7 +25,7 @@ export class CarteComponent implements OnInit {
   }
 
   addToCart(project: any):void{
-    if(this.connexion.RefreshToken()){
+    if(true){
       this.cart.Add(project)
     }
   }

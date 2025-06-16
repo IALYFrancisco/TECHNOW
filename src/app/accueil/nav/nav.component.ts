@@ -13,8 +13,6 @@ export class NavComponent implements OnInit {
 
   constructor( public connexion: UserIsConnectedService, private http: HttpClient, public router: Router) { }
 
-  isConnected = this.connexion.RefreshToken()
-
   ngOnInit(): void {
   }
 
