@@ -8,11 +8,11 @@ import { environment } from 'src/environments/environment';
 })
 export class UserIsConnectedService {
 
-  constructor( private http: HttpClient ) { }
-
   private isLoggedInSubject = new BehaviorSubject<boolean>(false)
   
   isLoggedIn$: Observable<boolean> = this.isLoggedInSubject.asObservable()
+
+  constructor( private http: HttpClient ) { }
 
   refresh(): Observable<any>{
     return this.http.post<{ accessToken: string }>(
