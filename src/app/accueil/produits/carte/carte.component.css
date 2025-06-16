@@ -1,11 +1,13 @@
 div.parent {
     background:rgb(245, 245, 245);
-    width: calc(100vw - 250px);
+    width: 100%;
     height: max-content;
     border-radius: 2px;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 35px;
+    padding: 40px;
+    margin-top: 20px;
 }
 
 div.parent div.carte {
