@@ -9,13 +9,6 @@ export class UserIsConnectedService {
 
   constructor( private http: HttpClient ) { }
 
-  RefreshToken(): void {
-    this.http.post(`${environment.API_BASE_URL}/authentication/token`, null, { withCredentials: true, observe: 'response' })
-      .subscribe({
-        next: (response: any) => {
-          localStorage.setItem('accessToken', response.body?.accessToken)
-        }
-      })
-  }
+  
 
 }
