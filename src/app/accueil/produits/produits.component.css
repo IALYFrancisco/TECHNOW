@@ -4,5 +4,5 @@ div.container-produits {
     padding: 30px;
     display: flex;
     justify-content: space-between;
-    column-gap: 20px;
+    column-gap: 30px;
 }

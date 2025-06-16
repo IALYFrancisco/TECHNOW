@@ -1,7 +1,6 @@
 article {
     width: 200px;
     height: max-content;
-    padding: 10px;
     display: flex;
     flex-direction: column;
 }
