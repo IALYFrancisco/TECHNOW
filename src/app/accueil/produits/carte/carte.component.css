@@ -2,17 +2,16 @@ div.parent {
     background:rgb(245, 245, 245);
     width: calc(100vw - 250px);
     height: max-content;
-    padding: 20px;
     border-radius: 2px;
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 div.parent div.carte {
     width: 170px;
     height: max-content;
     box-shadow: 0 0 5px #83838379;
-    margin: 0px 20px 32px 20px;
     border-radius: 2px;
     padding: 2px 2px 12px 2px;
 }
@@ -87,7 +86,6 @@ div.informations {
     display: flex;
     align-items: center;
     justify-content: end;
-    padding-right: 20px;
 }
 
 div.informations  div.input {

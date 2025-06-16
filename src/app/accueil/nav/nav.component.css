@@ -4,8 +4,7 @@ nav {
     background-color: rebeccapurple;
     display: flex;
     justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 30px;
     align-items: center;
     color: white;
     margin-bottom: 50px;
