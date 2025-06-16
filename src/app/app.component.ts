@@ -17,11 +17,21 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    
+    this.connexion.refresh().subscribe({
+      next: () => console.log("Session restaurée à l'ouverture."),
+      error: () => console.log("Utilisateur non connecté.")
+    })
+
+    this.refreshSub = interval(10 * 60 * 1000).subscribe(() => {
+      this.connexion.refresh().subscribe({
+        next: () => console.log("Access token mis à jour."),
+        error: () => console.log("Echèc de mis à jour du token.")
+      })
+    })
   }
 
   ngOnDestroy(): void {
-    
+    this.refreshSub?.unsubscribe()
   }
 
 }
