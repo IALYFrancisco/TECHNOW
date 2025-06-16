@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { UserIsConnectedService } from './services/user-is-connected.service';
+import { Subscription, interval } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'template-angular';
+
+  private refreshSub?: Subscription
 
   constructor(private connexion: UserIsConnectedService){}
 
@@ -20,6 +23,10 @@ export class AppComponent implements OnInit {
       this.connexion.RefreshToken()
     }, 13 * 60 * 1000)
 
+  }
+
+  ngOnDestroy(): void {
+    
   }
 
 }
