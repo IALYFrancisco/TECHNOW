@@ -1,35 +1,36 @@
-div.parent {
+ul {
     background:rgb(245, 245, 245);
-    width: calc(100vw - 250px);
+    width: 100%;
     height: max-content;
-    padding: 20px;
     border-radius: 2px;
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+    margin-top: 20px;
 }
 
-div.parent div.carte {
+ul li {
     width: 170px;
     height: max-content;
     box-shadow: 0 0 5px #83838379;
-    margin: 0px 20px 32px 20px;
     border-radius: 2px;
     padding: 2px 2px 12px 2px;
 }
 
-div.parent div.carte div.img {
+ul li div.img {
     width: 100%;
     height: 200px;
 }
 
-div.parent div.carte div.img img {
+ul li div.img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 2px;
 }
 
-div.parent div.carte div.action {
+ul li div.action {
     width: 100%;
     display: flex;
     align-items: center;
@@ -38,19 +39,19 @@ div.parent div.carte div.action {
     padding-right: 10px;
 }
 
-div.parent div.carte div.action img {
+ul li div.action img {
     width: 35px;
 }
 
-div.parent div.carte div.action img:hover {
+ul li div.action img:hover {
     cursor: pointer;
 }
 
-div.parent div.carte div.action img:active {
+ul li div.action img:active {
     transform: scale(0.9);
 }
 
-div.parent div.carte div.action button {
+ul li div.action button {
     width: 100%;
     height: 30px;
     cursor: pointer;
@@ -67,27 +68,25 @@ div.parent div.carte div.action button {
     justify-content: center;
 }
 
-div.parent div.carte div.action button img {
+ul li div.action button img {
     width: 15px;
     margin-left: 5px;
 }
 
-div.parent div.carte div.action button:active {
+ul li div.action button:active {
     transform: scale(0.98);
 }
 
-div.parent div.carte div.action button.disabled {
+ul li div.action button.disabled {
     background-color: #a4a4a4;
     transform: none;
 }
 
 div.informations {
     width: 100%;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: end;
-    padding-right: 20px;
 }
 
 div.informations  div.input {

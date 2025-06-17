@@ -6,8 +6,8 @@
         <input type="search" name="search=" id="" placeholder="Search ...">
     </div>
 </div>
-<div class="parent">
-    <div class="carte" *ngFor="let product of products">
+<ul>
+    <li *ngFor="let product of products">
         <div class="img">
             <img src="" alt="" [src] = 'product.img_url'>
         </div>
@@ -22,10 +22,10 @@
             Ar {{ product.price }}
         </div>
         <div class="action">
-            <button type="button" [ngClass]="{ 'disabled' : !isConnected }" (click)="addToCart(product)">
+            <button type="button" [ngClass]="{ 'disabled' : !(connected | async) }" (click)="addToCart(product)">
                 add to cart
                 <img src="../../../../assets/ICON/add_to_cart.png" alt="">
             </button>
         </div>
-    </div>
-</div>
+    </li>
+</ul>

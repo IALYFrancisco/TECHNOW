@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
 
   constructor( public connexion: UserIsConnectedService, private http: HttpClient, public router: Router) { }
 
-  isConnected = this.connexion.RefreshToken()
+  connected = this.connexion.isLoggedIn$
 
   ngOnInit(): void {
   }
@@ -22,7 +22,9 @@ export class NavComponent implements OnInit {
     localStorage.removeItem('user')
     localStorage.removeItem('accessToken')
     this.http.post(`${environment.API_BASE_URL}/authentication/logout`, {}, { withCredentials: true })
-      .subscribe()
+      .subscribe({
+        next: () => this.connexion.isLoggedInSubject.next(false)
+      })
   }
 
 }
