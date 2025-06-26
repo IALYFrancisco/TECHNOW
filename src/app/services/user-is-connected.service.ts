@@ -27,13 +27,4 @@ export class UserIsConnectedService {
     )
   }
 
-  checkConnection():void{
-    let user = localStorage.getItem('user') || null
-    let accessToken = localStorage.getItem('accessToken') || null
-    if(user && accessToken){
-      this.isLoggedInSubject.next(true)
-    }
-    this.isLoggedInSubject.next(false)
-  }
-
 }
