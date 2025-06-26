@@ -12,12 +12,13 @@ import { SidebarComponent } from './components/admindashboard/sidebar/sidebar.co
 import { AdminallproductsComponent } from './components/admindashboard/adminallproducts/adminallproducts.component';
 import { AdminsettingsComponent } from './components/admindashboard/adminsettings/adminsettings.component';
 import { NavbarComponent } from './components/admindashboard/navbar/navbar.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AddproductComponent } from './components/admindashboard/addproduct/addproduct.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthenticationComponent } from './views/authentication/authentication.component';
 import { LoginComponent } from './views/authentication/login/login.component';
 import { RegisterComponent } from './views/authentication/register/register.component'
+import { InterceptorService } from './services/interceptor.service';
 
 
 const routes: Routes = [
@@ -77,7 +78,11 @@ const routes: Routes = [
     RouterModule
   ],
   providers: [
-
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
