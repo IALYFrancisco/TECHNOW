@@ -19,7 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    
+
     this.connexion.refresh().subscribe({
       next: () => console.log("Session restaurée à l'ouverture."),
       error: () => console.log("Utilisateur non connecté.")
