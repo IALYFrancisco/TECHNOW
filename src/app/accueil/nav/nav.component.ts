@@ -19,12 +19,12 @@ export class NavComponent implements OnInit {
   }
 
   LogOut():void{
+    this.http.post(`${environment.API_BASE_URL}/authentication/logout`, {}, { withCredentials: true })
+    .subscribe({
+      next: () => this.connexion.isLoggedInSubject.next(false)
+    })
     localStorage.removeItem('user')
     localStorage.removeItem('accessToken')
-    this.http.post(`${environment.API_BASE_URL}/authentication/logout`, {}, { withCredentials: true })
-      .subscribe({
-        next: () => this.connexion.isLoggedInSubject.next(false)
-      })
   }
 
 }
