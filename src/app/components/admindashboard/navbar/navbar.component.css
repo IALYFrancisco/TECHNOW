@@ -20,7 +20,7 @@ div.container nav ul li {
     width: 100%;
     height: inherit;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
 }

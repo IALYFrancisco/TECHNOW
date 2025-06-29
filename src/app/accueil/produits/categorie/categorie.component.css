@@ -92,7 +92,7 @@ article:nth-child(2) ul li .colors{
     display: flex;
     padding: 5px 5px 0 5px;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
     margin-top: 7px;
     background-color: rgb(226, 226, 226);
 }
