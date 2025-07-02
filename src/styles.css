@@ -19,3 +19,7 @@ body {
     width: 100%;
     height: max-content;
 }
+
+article ul {
+    list-style-type: none;
+}
