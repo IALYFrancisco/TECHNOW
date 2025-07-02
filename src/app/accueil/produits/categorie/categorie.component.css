@@ -1,44 +1,30 @@
 article {
     width: 200px;
-    height: max-content;
     display: flex;
     flex-direction: column;
 }
 
 article p.title {
-    font-family: Poppins;
     font-size: 15px;
     border-bottom: rebeccapurple 2px solid;
-    width: 50px;
-}
-
-article ul {
-    list-style-type: none;
+    width: max-content;
 }
 
 article ul li {
-    width: 100%;
-    height: max-content;
-    font-family: Poppins;
     font-size: 12px;
     display: flex;
     align-items: center;
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin: 18px auto;
     transition: 0.2s;
 }
 
 article ul li span {
-    width: max-content;
-    height: 100%;
     display: flex;
     align-items: center;
 }
 
 article ul li .color_option span:nth-child(2),
 article ul li .price_option span:nth-child(2) {
-    width: 100%;
-    height: 100%;
     display: flex;
     padding-left: 15%;
 }
@@ -83,12 +69,10 @@ article:nth-child(2) ul li .price_option{
     width: 100%;
     display: flex;
     align-items: center;
-    height: max-content;
 }
 
 article:nth-child(2) ul li .colors{
     width: 100%;
-    height: max-content;
     display: flex;
     padding: 5px 5px 0 5px;
     flex-wrap: wrap;
@@ -107,7 +91,6 @@ article:nth-child(2) ul li .colors .color {
 
 article:nth-child(2) ul li .prices {
     width: 100%;
-    height: max-content;
     background-color: rgb(226, 226, 226);
     padding: 6px 0;
 }
@@ -136,24 +119,21 @@ article:nth-child(2) ul li .prices  .less_number {
     justify-content: center;
     left: 3px;
     font-size: 10px;
-    font-family: Poppins;
     border-radius: 2px;
 }
 
 article:nth-child(2) ul li .prices  input {
     width: 100%;
     height: 100%;
-    outline: none;
     padding-left: 48px;
     border: 1px ;
     border-radius: 3px;
 }
 
 article:nth-child(2) ul li .prices  input:focus {
-    border: 1px rebeccapurple solid;
+    outline: rebeccapurple 1px solid;
 }
 
 article:nth-child(2) ul li .prices  input::placeholder {
     font-size: 11px;
-    font-family: Poppins;
 }
