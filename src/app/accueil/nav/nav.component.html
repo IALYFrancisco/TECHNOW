@@ -4,7 +4,9 @@
             TECHNOW
         </a>
     </span>
-    <img src="/assets/images/shopping-bag.png" alt="">
-    <button *ngIf="!(connected | async)" routerLink="/authentication/login">Se connecter</button>
-    <button *ngIf="connected | async" (click)="LogOut()">Se déconnecter</button>
+    <section>
+        <img *ngIf="connected | async" src="/assets/images/shopping-bag.png" alt="">
+        <button *ngIf="!(connected | async)" routerLink="/authentication/login">Se connecter</button>
+        <button *ngIf="connected | async" (click)="LogOut()">Se déconnecter</button>
+    </section>
 </nav>
