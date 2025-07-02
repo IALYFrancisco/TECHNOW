@@ -100,6 +100,16 @@ button:active {
     transition: 200ms;
 }
 
+section {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+img {
+    width: 26px;
+}
+
 @media only screen and (max-width: 700px) {
     nav {
         padding-left: 15px;

@@ -1,4 +1,4 @@
-div.container {
+.container {
   position: absolute;
   top: 10%;
   left: 38%;
@@ -8,49 +8,45 @@ div.container {
   box-shadow: 1px 1px 10px #79797964, -1px -1px 10px #79797964;
 }
 
-div.container form{
+form{
   width: 400px;
-  height: max-content;
 }
 
-div.container form fieldset {
+fieldset {
   border: 2px rebeccapurple solid;
   border-radius: 3px;
   padding: 0 8px 8px 8px;
 }
 
-div.container form fieldset legend {
+legend {
   margin: auto;
   padding: 0 5px;
-  font-family: poppins;
   color:rebeccapurple;
   font-size: 15px;
 }
 
-div.container form fieldset div.element {
+.element {
   width: 49%;
-  height: max-content;
   margin-bottom: 5px;
 }
 
-div.container form fieldset div.element:not(:nth-child(6)) input {
+.element:not(:nth-child(6)) input {
   width: 100%;
   height: 35px;
   padding-left: 5px;
   outline: none;
   border: 1px grey solid;
   border-radius: 3px;
-  box-sizing: border-box;
 }
 
-div.container form fieldset div.element:not(:nth-child(6)) input:focus,
-div.container form fieldset div.element textarea:focus,
-div.container form fieldset div.element select:focus {
+.element:not(:nth-child(6)) input:focus,
+textarea:focus,
+select:focus {
   border: 2px solid rebeccapurple;
   border-radius: 3px;
 }
 
-div.container form fieldset div.element textarea {
+textarea {
   outline: none;
   width: 100%;
   height: 100px;
@@ -58,62 +54,52 @@ div.container form fieldset div.element textarea {
   padding: 5px;
 }
 
-div.container form fieldset div.element label {
-  font-family: poppins;
+label {
   font-size: 10px;
 }
 
-div.container form fieldset div.element button {
+button {
   width: 204%;
   height: 35px;
   outline: none;
   border: none;
   background-color: rebeccapurple;
   color: white;
-  font-family: poppins;
   font-size: 12px;
   border-radius: 3px;
   cursor:pointer;
-  margin: auto;
 }
 
-div.container form fieldset div.down div.element:nth-child(1) {
+.down .element:nth-child(1) {
   align-items: center;
   justify-content: space-between;
-  height: max-content;
 }
 
-div.container form fieldset div.down div.element input[type='color'] {
+.element input[type='color'] {
   width: 100%;
   border: 1px rgb(219, 219, 219) solid;
   padding: 0;
-  box-sizing: border-box;
   outline: none;
   height: 37px;
   border-radius: 3px;
 }
 
-div.container form fieldset div.element select {
+select {
   width: 100%;
   height: 35px;
   outline: none;
-  font-family: poppins;
   font-size: 13px;
 }
 
-div.container form fieldset div.up {
-  width: 100%;
-}
-
-div.container form fieldset div.up div.row
-,div.container form fieldset div.down div.row {
+.up .row
+,.down .row {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-div.container form fieldset div.down div.container_image {
+.container_image {
   width: 55%;
   object-fit: cover;
   display: flex;
@@ -121,7 +107,7 @@ div.container form fieldset div.down div.container_image {
   border-radius: 4px;
 }
 
-div.container form fieldset div.down div.container_image img {
+img {
   width: 100%;
   border-radius: 3px;
 }
