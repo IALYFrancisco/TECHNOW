@@ -4,4 +4,5 @@ div.left {
 
 div.left div.right {
     width: 100%;
+    padding: 20px;
 }
