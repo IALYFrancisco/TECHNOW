@@ -26,7 +26,7 @@ const routes: Routes = [
     component:AccueilComponent
   },
   { 
-    path: 'admindashboard', component: AdmindashboardComponent, children: [
+    path: 'backoffice', component: AdmindashboardComponent, children: [
     { 
       path: '',
       component: AdminallproductsComponent
