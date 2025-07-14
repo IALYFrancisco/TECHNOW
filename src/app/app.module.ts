@@ -11,7 +11,6 @@ import { AdmindashboardComponent } from './views/admindashboard/admindashboard.c
 import { SidebarComponent } from './components/admindashboard/sidebar/sidebar.component';
 import { AdminallproductsComponent } from './components/admindashboard/adminallproducts/adminallproducts.component';
 import { AdminsettingsComponent } from './components/admindashboard/adminsettings/adminsettings.component';
-import { NavbarComponent } from './components/admindashboard/navbar/navbar.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthenticationComponent } from './views/authentication/authentication.component';
@@ -61,7 +60,6 @@ const routes: Routes = [
     AdmindashboardComponent,
     SidebarComponent,
     AdminallproductsComponent,
-    NavbarComponent,
     AuthenticationComponent,
     LoginComponent,
     RegisterComponent
