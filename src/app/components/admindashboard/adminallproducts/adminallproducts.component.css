@@ -1,3 +1,38 @@
+ul {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    display: flex;
+    column-gap: 5px;
+    font-size: 14px;
+    align-items: center;
+}
+
+li h6 {
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: rebeccapurple;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+button:active {
+    transform: scale(0.9);
+    transition: 200ms;
+}
+
 table {
     width: 100%;
     margin-top: 50px;

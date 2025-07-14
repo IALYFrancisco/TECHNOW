@@ -1,5 +1,13 @@
 <main>
-    <h2>Products</h2>
+    <h2>Produits</h2>
+    <ul>
+        <li *ngIf="requestIsDone">
+            <h6>{{products.length}}</h6>produits
+        </li>
+        <li>
+            <button>Ajouter un produit</button>
+        </li>
+    </ul>
     <table>
         <thead>
             <tr>
@@ -11,8 +19,8 @@
                 <th>Actions</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
+        <tbody *ngIf="requestIsDone">
+            <tr *ngFor="let product in products">
                 <td>
                     <img src="assets/images/gpu.jpg" />
                 </td>
@@ -27,46 +35,6 @@
                 </td>
                 <td>
                     <h5>12</h5>
-                </td>
-                <td>
-                    <h5>Actions</h5>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="assets/images/gpu.jpg" />
-                </td>
-                <td>
-                    <h5>Nvidia GTX</h5>
-                </td>
-                <td>
-                    <h5>GPU</h5>
-                </td>
-                <td>
-                    <h5>600 000</h5>
-                </td>
-                <td>
-                    <h5>19</h5>
-                </td>
-                <td>
-                    <h5>Actions</h5>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="assets/images/gpu.jpg" />
-                </td>
-                <td>
-                    <h5>Nvidia GTX</h5>
-                </td>
-                <td>
-                    <h5>GPU</h5>
-                </td>
-                <td>
-                    <h5>600 000</h5>
-                </td>
-                <td>
-                    <h5>6</h5>
                 </td>
                 <td>
                     <h5>Actions</h5>
