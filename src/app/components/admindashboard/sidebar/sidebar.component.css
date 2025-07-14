@@ -7,9 +7,14 @@ nav {
     padding-top: 20px;
 }
 
-nav > img{
+nav img{
     width: 30px;
     margin: 0 auto;
+}
+
+nav > a {
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
