@@ -16,8 +16,7 @@ export class AdminallproductsComponent implements OnInit {
       next: (response) => {
         this.products = response
         this.requestIsDone = true
-      }
-      ,
+      },
       error: () => console.log("Error fetching product list.")
     })
   }
