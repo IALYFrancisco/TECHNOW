@@ -11,6 +11,7 @@ export class AddProductComponent implements OnInit {
   constructor() { }
 
   newProducts = new FormGroup({
+    category: new FormControl(null, [Validators.required]),
     mark: new FormControl(null, [Validators.required]),
     model: new FormControl(null, [Validators.required]),
     stock: new FormControl(null, [Validators.required]),
@@ -21,6 +22,14 @@ export class AddProductComponent implements OnInit {
   })
 
   ngOnInit(): void {
+  }
+
+  AddProduct():void{
+    if(this.newProducts.valid){
+      window.alert("Posting product data.")
+    }else{
+      window.alert("Données invalides 🛑, remplissez tout les champs.")
+    }
   }
 
 }
