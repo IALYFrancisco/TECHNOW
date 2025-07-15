@@ -33,7 +33,12 @@ const routes: Routes = [
     {
       path: 'settings',
       component: AdminsettingsComponent
-    }]
+    },
+    {
+      path: 'add-product',
+      component: AddProductComponent
+    }
+  ]
   },
   { path: 'authentication',
     component: AuthenticationComponent,
