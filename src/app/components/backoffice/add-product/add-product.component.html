@@ -2,6 +2,16 @@
     <form>
         <h2>Ajout de produit</h2>
         <section>
+            <label for="category">Catégorie :</label>
+            <select name="category" id="category">
+                <option value="uc">UC</option>
+                <option value="gpu">GPU</option>
+                <option value="mb">Carte mère</option>
+                <option value="ram">RAM</option>
+                <option value="cpu">CPU</option>
+            </select>
+        </section>
+        <section>
             <div class="element">
                 <label for="mark">Marque :</label>
                 <input type="text" required placeholder="Marque du produit" id="mark">
