@@ -17,6 +17,7 @@ import { AuthenticationComponent } from './views/authentication/authentication.c
 import { LoginComponent } from './views/authentication/login/login.component';
 import { RegisterComponent } from './views/authentication/register/register.component'
 import { InterceptorService } from './services/interceptor.service';
+import { AddProductComponent } from './components/backoffice/add-product/add-product.component';
 
 
 const routes: Routes = [
@@ -62,7 +63,8 @@ const routes: Routes = [
     AdminallproductsComponent,
     AuthenticationComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
