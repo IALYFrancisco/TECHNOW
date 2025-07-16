@@ -135,12 +135,13 @@ div.informations div.input input:focus {
     color: rebeccapurple;
 }
 
-.categorie {
+.category {
     font-size: 13px;
     padding-left: 8px;
     color: red;
     font-weight: 600;
     margin-top: 10px;
+    text-transform: uppercase;
 }
 
 .price {

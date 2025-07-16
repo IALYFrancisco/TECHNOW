@@ -1,7 +1,7 @@
 <div class="informations">
     <div class="input">
         <div class="search_icon">
-            <img src="../../../../assets/ICON/search.png" alt="">
+            <img src="assets/ICON/search.png" alt="">
         </div>
         <input type="search" name="search=" id="" placeholder="Search ...">
     </div>
@@ -9,22 +9,22 @@
 <ul>
     <li *ngFor="let product of products">
         <div class="img">
-            <img src="" alt="" [src] = 'product.img_url'>
+            <img src="" alt="" src="assets/PRODUIT/CARTE-GRAPHIQUE/51oHZsKzIvL.jpg">
         </div>
-        <div class="categorie">
-            {{ product.categorie}}
+        <div class="category">
+            {{ product.category}}
         </div>
         <div class="mark_model">
             {{ product.mark}} {{ product.model}}
         </div>
         <div></div>
         <div class="price">
-            Ar {{ product.price }}
+            Ar {{ product.unite_price }}
         </div>
         <div class="action">
             <button type="button" [ngClass]="{ 'disabled' : !(connected | async) }" (click)="addToCart(product)">
                 add to cart
-                <img src="../../../../assets/ICON/add_to_cart.png" alt="">
+                <img src="assets/ICON/add_to_cart.png" alt="">
             </button>
         </div>
     </li>
