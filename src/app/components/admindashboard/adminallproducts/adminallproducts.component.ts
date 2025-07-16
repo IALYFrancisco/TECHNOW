@@ -1,5 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-adminallproducts',
@@ -12,7 +13,7 @@ export class AdminallproductsComponent implements OnInit {
   products:any
   requestIsDone: boolean = false
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/product/get').subscribe({
+    this.http.get(`${environment.API_BASE_URL}/product/get`).subscribe({
       next: (response) => {
         this.products = response
         this.requestIsDone = true
