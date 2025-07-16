@@ -98,17 +98,3 @@ span {
     display: flex;
     align-items: center;
 }
-
-.loading {
-    width: 18px;
-    animation: loader infinite linear 1.5s;
-}
-
-@keyframes loader {
-    from {
-        transform: rotateZ(0deg)
-    }
-    to {
-        transform: rotateZ(360deg)
-    }
-}
