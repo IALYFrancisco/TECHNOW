@@ -46,7 +46,10 @@
             <textarea name="description" id="description" placeholder="Ecrivez des déscriptions du prduit." formControlName="description"></textarea>
         </section>
         <section class="button-container">
-            <button>Soumettre</button>
+            <button (click)="ClickButton()">
+                <span *ngIf="btn_clicked"><img class="loading" src="assets/images/loading.png" alt=""></span>
+                <span *ngIf="!btn_clicked">Soumettre</span>
+            </button>
         </section>
     </form>
 </main>

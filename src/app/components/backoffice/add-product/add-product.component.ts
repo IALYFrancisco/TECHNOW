@@ -24,17 +24,25 @@ export class AddProductComponent implements OnInit {
     description: new FormControl(null, [Validators.required])
   })
 
+  btn_clicked: boolean = false
+
   ngOnInit(): void {
+  }
+
+  ClickButton():void{
+    this.btn_clicked = true
   }
 
   AddProduct():void{
     if(this.newProducts.valid){
       this.http.post(`${environment.API_BASE_URL}/product/add`, this.newProducts.value).subscribe({
-        next: () => { this.router.navigate(['/backoffice']) },
+        next: () => {
+          this.router.navigate(['/backoffice'])
+        },
         error: (err) => { console.log(err) }
       })
     }else{
-      window.alert("Données invalides 🛑, remplissez tout les champs.")
+      // window.alert("Données invalides 🛑, remplissez tout les champs.")
     }
   }
 
