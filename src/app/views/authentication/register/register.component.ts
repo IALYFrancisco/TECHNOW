@@ -14,6 +14,8 @@ export class RegisterComponent implements OnInit {
   constructor( private http: HttpClient, public router: Router ) { }
 
   request:boolean = false
+  
+  formNotValid:boolean = true
 
   btn_clicked: boolean = false
 
@@ -32,6 +34,7 @@ export class RegisterComponent implements OnInit {
 
   Register():void{
     if(this.newUser.valid){
+      this.formNotValid = false
       this.http.post(`${environment.API_BASE_URL}/authentication/register`, this.newUser.value, { observe: 'response' })
         .subscribe(
         {

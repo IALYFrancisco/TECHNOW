@@ -1,4 +1,7 @@
 <main>
+    <span *ngIf="btn_clicked && !newUser.valid" class="notification error">
+        <p>Veuillez remplir tout les champs.</p>
+    </span>
     <form [formGroup]="newUser" (submit)="Register()">
         <h2>Inscription</h2>
         <section>
