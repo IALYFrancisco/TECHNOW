@@ -58,3 +58,7 @@ tr img {
 thead {
     background: rebeccapurple;
 }
+
+.category {
+    text-transform: uppercase;
+}
