@@ -48,26 +48,6 @@ button {
     align-items: center;
 }
 
-button img {
-    width: 22px;
-    margin-right: 8px;
-    animation: spin 1.5s infinite ease-in-out;
-    display: none;
-}
-
-button img.active {
-    display: initial;
-}
-
-@keyframes spin {
-    0%{
-        transform: rotateZ(0deg);
-    }
-    100%{
-        transform: rotateZ(360deg);
-    }
-}
-
 button:active {
     transform: scale(0.9);
     transition: 200ms;
@@ -80,6 +60,11 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+span {
+    display: flex;
+    align-items: center;
 }
 
 @media only screen and (max-width: 700px) {

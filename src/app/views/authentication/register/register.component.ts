@@ -15,6 +15,8 @@ export class RegisterComponent implements OnInit {
 
   request:boolean = false
 
+  btn_clicked: boolean = false
+
   ngOnInit(): void {
   }
 
@@ -23,6 +25,10 @@ export class RegisterComponent implements OnInit {
     email: new FormControl(null, [Validators.required]),
     password: new FormControl(null, [Validators.required])
   })
+
+  ClickButton():void{
+    this.btn_clicked = true
+  }
 
   Register():void{
     if(this.newUser.valid){

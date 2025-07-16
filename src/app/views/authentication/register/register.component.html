@@ -14,7 +14,10 @@
             <input type="password" required placeholder="choisissez des mots de passe robustes" id="password" formControlName="password">
         </section>
         <section class="button-container">
-            <button type="submit"> <img src="/assets/images/loading.png" alt="Icone de chargement de TECHNOW" [ngClass]="{'active': request}"> S'inscrire</button>
+            <button (click)="ClickButton()">
+                <span *ngIf="btn_clicked"><img class="loading" src="assets/images/loading.png"></span>
+                <span *ngIf="!btn_clicked">S'inscrire</span>
+            </button>
         </section>
     </form>
 </main>
