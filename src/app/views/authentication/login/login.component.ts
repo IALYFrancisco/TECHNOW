@@ -25,14 +25,22 @@ export class LoginComponent {
     if(this.user.valid){
       this.formIsValid = true
       this.http.post(`${environment.API_BASE_URL}/authentication/login`, this.user.value, { withCredentials: true, observe: 'response' })
-        .subscribe((response:any) => { 
-          if(response.status == 200){
-            localStorage.setItem('accessToken', response.body.accessToken)
-            localStorage.setItem('user', JSON.stringify(response.body.user))
-            this.connection.isLoggedInSubject.next(true)
-            this.router.navigate(['/'])
+        .subscribe({
+          next: (response:any) => {
+            if(response.status===204){
+              this.formIsValid = false
+              window.alert("Email or password incorrect.")
+            }if(response.status===200){
+              localStorage.setItem('accessToken', response.body.accessToken)
+              localStorage.setItem('user', JSON.stringify(response.body.user))
+              this.connection.isLoggedInSubject.next(true)
+              this.router.navigate(['/'])
+            }
+          },
+          error: (error) => {
+            console.log(error)
           }
-         })
+        })
     }
   }
 
