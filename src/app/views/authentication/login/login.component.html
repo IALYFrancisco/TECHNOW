@@ -1,4 +1,7 @@
 <main>
+    <span *ngIf="wrongCredentials" class="notification error">
+        <p>Email ou mot de passe incorrect.</p>
+    </span>
     <form [formGroup]="user" (submit)="Login()">
         <h2>Connexion</h2>
         <section>
