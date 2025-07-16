@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -8,7 +11,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor() { }
+  constructor( private http: HttpClient, private router: Router ) { }
 
   newProducts = new FormGroup({
     category: new FormControl(null, [Validators.required]),
@@ -26,7 +29,10 @@ export class AddProductComponent implements OnInit {
 
   AddProduct():void{
     if(this.newProducts.valid){
-      window.alert("Posting product data.")
+      this.http.post(`${environment.API_BASE_URL}/product/add`, this.newProducts.value).subscribe({
+        next: () => { this.router.navigate(['/backoffice']) },
+        error: (err) => { console.log(err) }
+      })
     }else{
       window.alert("Données invalides 🛑, remplissez tout les champs.")
     }
