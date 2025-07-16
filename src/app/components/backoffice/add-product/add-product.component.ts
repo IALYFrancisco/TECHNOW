@@ -15,7 +15,7 @@ export class AddProductComponent implements OnInit {
     mark: new FormControl(null, [Validators.required]),
     model: new FormControl(null, [Validators.required]),
     stock: new FormControl(null, [Validators.required]),
-    unitePrice: new FormControl(null, [Validators.required]),
+    unite_price: new FormControl(null, [Validators.required]),
     image: new FormControl(null, [Validators.required]),
     color: new FormControl(null, [Validators.required]),
     description: new FormControl(null, [Validators.required])
