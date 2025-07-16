@@ -44,6 +44,14 @@ button {
     color: white;
     cursor: pointer;
     transition: 200ms;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+button span {
+    display: flex;
+    align-items: center;
 }
 
 button:active {

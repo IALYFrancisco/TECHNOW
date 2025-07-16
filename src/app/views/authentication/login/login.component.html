@@ -10,7 +10,9 @@
             <input type="password" required placeholder="saisissez votre mot de passe" id="password" formControlName="password">
         </section>
         <section class="button-container">
-            <button>Connexion</button>
+            <button>
+                <span *ngIf="formIsValid"><img class="loading" src="assets/images/loading.png"></span>
+                Connexion</button>
             <a routerLink="/authentication/register">Pas de compte ?</a>
         </section>
     </form>
