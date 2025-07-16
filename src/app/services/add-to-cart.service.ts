@@ -10,9 +10,9 @@ export class AddToCartService {
   items():number {
     let items = localStorage.getItem('cart') || null
     if(items){
-      return items.length
+      return JSON.parse(items).length
     }else{
-      return 0 
+      return 0
     }
   }
   
