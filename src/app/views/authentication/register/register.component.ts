@@ -13,14 +13,11 @@ export class RegisterComponent implements OnInit {
 
   constructor( private http: HttpClient, public router: Router ) { }
 
-  request:boolean = false
-  
-  formNotValid:boolean = true
-
-  btn_clicked: boolean = false
-
   ngOnInit(): void {
   }
+
+  formIsNotValid:any
+  formIsValid:any
 
   newUser: any = new FormGroup({
     name: new FormControl(null, [Validators.required]),
@@ -28,13 +25,10 @@ export class RegisterComponent implements OnInit {
     password: new FormControl(null, [Validators.required])
   })
 
-  ClickButton():void{
-    this.btn_clicked = true
-  }
-
   Register():void{
     if(this.newUser.valid){
-      this.formNotValid = false
+      this.formIsValid = true
+      this.formIsNotValid = false
       this.http.post(`${environment.API_BASE_URL}/authentication/register`, this.newUser.value, { observe: 'response' })
         .subscribe(
         {
@@ -44,10 +38,13 @@ export class RegisterComponent implements OnInit {
             }
           },
           error: (err) => {
+            this.formIsValid = false
             console.log(err)
           }
         }
       )
+    }else{
+      this.formIsNotValid = true
     }
   }
 

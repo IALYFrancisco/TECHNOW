@@ -1,5 +1,5 @@
 <main>
-    <span *ngIf="btn_clicked && !newUser.valid" class="notification error">
+    <span *ngIf="formIsNotValid" class="notification error">
         <p>Veuillez remplir tout les champs.</p>
     </span>
     <form [formGroup]="newUser" (submit)="Register()">
@@ -17,9 +17,9 @@
             <input type="password" required placeholder="choisissez des mots de passe robustes" id="password" formControlName="password">
         </section>
         <section class="button-container">
-            <button (click)="ClickButton()">
-                <span *ngIf="btn_clicked"><img class="loading" src="assets/images/loading.png"></span>
-                <span *ngIf="!btn_clicked">S'inscrire</span>
+            <button>
+                <span *ngIf="formIsValid"><img class="loading" src="assets/images/loading.png"></span>
+                <span *ngIf="true">S'inscrire</span>
             </button>
         </section>
     </form>
