@@ -1,15 +1,21 @@
 nav {
     width: 55px;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     background-color: rebeccapurple;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
 }
 
-nav > img{
+nav img{
     width: 30px;
     margin: 0 auto;
+}
+
+nav > a {
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {

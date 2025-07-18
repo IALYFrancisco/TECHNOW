@@ -1,20 +1,45 @@
-<div class="container">
-    <app-addproduct [_toggled]="toggled"></app-addproduct>
-    <h3>Products</h3>
-    <div class="categories_container">
-        <div class="left">
-            <p>categories</p>
-        </div>
-        <div class="right">
-            <button>add categorie</button>
-        </div>
-    </div>
-    <div class="all_products_container">
-        <div class="left">
-            <p>all products</p>
-        </div>
-        <div class="right">
-            <button (click)="addProduct()">add product</button>
-        </div>
-    </div>
-</div>
+<main>
+    <h2>Produits</h2>
+    <ul>
+        <li *ngIf="requestIsDone">
+            <h6>{{products.length}}</h6>produits
+        </li>
+        <li>
+            <button routerLink="/backoffice/add-product">Ajouter un produit</button>
+        </li>
+    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Images</th>
+                <th>Marques et modèles</th>
+                <th>Catégories</th>
+                <th>Prix (en Ar)</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="requestIsDone">
+            <tr *ngFor="let product of products">
+                <td>
+                    <img src="assets/images/gpu.jpg" />
+                </td>
+                <td>
+                    <h5>{{product.mark}} {{product.model}}</h5>
+                </td>
+                <td>
+                    <h5 class="category">{{product.category}}</h5>
+                </td>
+                <td>
+                    <h5>{{product.unite_price}}</h5>
+                </td>
+                <td>
+                    <h5>{{product.stock}}</h5>
+                </td>
+                <td>
+                    <h5>Actions</h5>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>

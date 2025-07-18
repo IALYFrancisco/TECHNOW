@@ -11,14 +11,13 @@ import { AdmindashboardComponent } from './views/admindashboard/admindashboard.c
 import { SidebarComponent } from './components/admindashboard/sidebar/sidebar.component';
 import { AdminallproductsComponent } from './components/admindashboard/adminallproducts/adminallproducts.component';
 import { AdminsettingsComponent } from './components/admindashboard/adminsettings/adminsettings.component';
-import { NavbarComponent } from './components/admindashboard/navbar/navbar.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AddproductComponent } from './components/admindashboard/addproduct/addproduct.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthenticationComponent } from './views/authentication/authentication.component';
 import { LoginComponent } from './views/authentication/login/login.component';
 import { RegisterComponent } from './views/authentication/register/register.component'
 import { InterceptorService } from './services/interceptor.service';
+import { AddProductComponent } from './components/backoffice/add-product/add-product.component';
 
 
 const routes: Routes = [
@@ -26,7 +25,7 @@ const routes: Routes = [
     component:AccueilComponent
   },
   { 
-    path: 'admindashboard', component: AdmindashboardComponent, children: [
+    path: 'backoffice', component: AdmindashboardComponent, children: [
     { 
       path: '',
       component: AdminallproductsComponent
@@ -34,7 +33,12 @@ const routes: Routes = [
     {
       path: 'settings',
       component: AdminsettingsComponent
-    }]
+    },
+    {
+      path: 'add-product',
+      component: AddProductComponent
+    }
+  ]
   },
   { path: 'authentication',
     component: AuthenticationComponent,
@@ -62,11 +66,10 @@ const routes: Routes = [
     AdmindashboardComponent,
     SidebarComponent,
     AdminallproductsComponent,
-    NavbarComponent,
-    AddproductComponent,
     AuthenticationComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

@@ -23,3 +23,38 @@ body {
 article ul {
     list-style-type: none;
 }
+
+.loading {
+    width: 18px;
+    animation: loader infinite linear 1.5s;
+}
+
+@keyframes loader {
+    from {
+        transform: rotateZ(0deg)
+    }
+    to {
+        transform: rotateZ(360deg)
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(-5px)
+    }
+    20%{
+        transform: translateX(5px)
+    }
+    40%{
+        transform: translateX(-5px)
+    }
+    60%{
+        transform: translateX(5px)
+    }
+    80%{
+        transform: translateX(-5px)
+    }
+    100%{
+        transform: translateX(5px)
+    }
+}

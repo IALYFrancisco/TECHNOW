@@ -1,0 +1,55 @@
+<main>
+    <form (submit)="AddProduct()" [formGroup]="newProducts">
+        <h2>Ajout de produit</h2>
+        <section>
+            <label for="category">Catégorie :</label>
+            <select name="category" id="category" formControlName="category">
+                <option value="uc">UC</option>
+                <option value="gpu">GPU</option>
+                <option value="mb">Carte mère</option>
+                <option value="ram">RAM</option>
+                <option value="cpu">CPU</option>
+            </select>
+        </section>
+        <section>
+            <div class="element">
+                <label for="mark">Marque :</label>
+                <input type="text" required placeholder="Marque du produit" id="mark" formControlName="mark">
+            </div>
+            <div class="element">
+                <label for="model">Modèle :</label>
+                <input type="text" required placeholder="Modèle du produit" id="model" formControlName="model">
+            </div>
+        </section>
+        <section>
+            <div class="element">
+                <label for="stock">Stock du produit :</label>
+                <input type="number" min="0" required placeholder="Le nombre de stock à ajouter." id="stock" formControlName="stock">
+            </div>
+            <div class="element">
+                <label for="price">Prix unitaire :</label>
+                <input type="number" min="0" required placeholder="Prix unitaire du produit" id="price" formControlName="unite_price">
+            </div>
+        </section>
+        <section>
+            <div class="element">
+                <label for="image">Image :</label>
+                <input type="file" required placeholder="Image du produit" id="image" formControlName="image">
+            </div>
+            <div class="element">
+                <label for="color">Couleur :</label>
+                <input type="color" required placeholder="Couleur du produit" id="color" formControlName="color">
+            </div>
+        </section>
+        <section>
+            <label for="description">Déscriptions :</label>
+            <textarea name="description" id="description" placeholder="Ecrivez des déscriptions du prduit." formControlName="description"></textarea>
+        </section>
+        <section class="button-container">
+            <button (click)="ClickButton()">
+                <span *ngIf="btn_clicked"><img class="loading" src="assets/images/loading.png" alt=""></span>
+                <span *ngIf="!btn_clicked">Soumettre</span>
+            </button>
+        </section>
+    </form>
+</main>

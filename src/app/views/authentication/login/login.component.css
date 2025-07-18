@@ -1,8 +1,23 @@
 main {
     width: 100%;
     display: flex;
-    justify-content: center;
-    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+main > span {
+    font-size: 12px;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 50px;
+}
+
+main .error {
+    background: rgb(255, 75, 75);
+    animation: .4s shake ease-in-out;
+    border: 2px solid red;
 }
 
 form {
@@ -44,6 +59,14 @@ button {
     color: white;
     cursor: pointer;
     transition: 200ms;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+button span {
+    display: flex;
+    align-items: center;
 }
 
 button:active {

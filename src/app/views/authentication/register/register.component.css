@@ -3,6 +3,22 @@ main {
     display: flex;
     justify-content: center;
     padding-top: 100px;
+    position: relative;
+}
+
+main > span {
+    top: 25px;
+    position: absolute;
+    font-size: 12px;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 3px;
+}
+
+main .error {
+    background: rgb(255, 75, 75);
+    animation: .4s shake ease-in-out;
+    border: 2px solid red;
 }
 
 form {
@@ -46,26 +62,7 @@ button {
     transition: 200ms;
     display: flex;
     align-items: center;
-}
-
-button img {
-    width: 22px;
-    margin-right: 8px;
-    animation: spin 1.5s infinite ease-in-out;
-    display: none;
-}
-
-button img.active {
-    display: initial;
-}
-
-@keyframes spin {
-    0%{
-        transform: rotateZ(0deg);
-    }
-    100%{
-        transform: rotateZ(360deg);
-    }
+    column-gap: 5px;
 }
 
 button:active {
@@ -80,6 +77,11 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+button span {
+    display: flex;
+    align-items: center;
 }
 
 @media only screen and (max-width: 700px) {
