@@ -1,8 +1,6 @@
 div.container-produits {
     width: 100%;
-    height: max-content;
     padding: 30px;
     display: flex;
-    justify-content: space-between;
     column-gap: 30px;
 }
