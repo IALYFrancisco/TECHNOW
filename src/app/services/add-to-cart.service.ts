@@ -1,42 +1,33 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AddToCartService {
 
-  constructor() { }
-
-  cartItems: any = localStorage.getItem('cart') || null
-
-  public cartItemsSubject = new BehaviorSubject<any>([])
-
-  cartItems$: Observable<any> = this.cartItemsSubject.asObservable()
-
-  cartItemsNumber$ = new Observable((observer:any)=>{
-    if(this.cartItems){
-      this.cartItemsSubject.next(JSON.parse(this.cartItems))
-    }else{
-      this.cartItemsSubject.next([])
-    }
-    this.cartItems$.subscribe({
-      next: (items:any)=>{
-        observer.next(items.length)
-      }
-    })
-    observer.complete()
-  })
-  
-  Add(project:any):void {
-    let cart = localStorage.getItem('cart') || null
-    if(!cart){
-      localStorage.setItem('cart', JSON.stringify([project]))
-    }else{
-      let _cart = JSON.parse(cart)
-      _cart.push(project)
-      localStorage.setItem('cart', JSON.stringify(_cart))
-    }
+  constructor() {
+    var cartItems = localStorage.getItem('cart') || null
+    this.cartItemsSubject.next(cartItems ? JSON.parse(cartItems) : []);
   }
 
-}
+
+  private cartItemsSubject = new BehaviorSubject<any[]>([])
+
+  cartItems$ = this.cartItemsSubject.asObservable()
+
+  cartItemsNumber$ = this.cartItems$.pipe(
+    map(items => items.length)
+  )
+  
+  Add(project:any):void {
+    let currentCart = this.cartItemsSubject.getValue();
+    let exists = currentCart.some((item:any) => item._id === project._id);
+    if (!exists) {
+    currentCart.push(project);
+    localStorage.setItem('cart', JSON.stringify(currentCart));
+    this.cartItemsSubject.next(currentCart);
+  }
+
+}}
