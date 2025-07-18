@@ -18,19 +18,19 @@ ul li {
     padding: 2px 2px 12px 2px;
 }
 
-ul li div.img {
+ul li .img {
     width: 100%;
     height: 200px;
 }
 
-ul li div.img img {
+ul li .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 2px;
 }
 
-ul li div.action {
+ul li .action {
     width: 100%;
     display: flex;
     align-items: center;
@@ -39,19 +39,19 @@ ul li div.action {
     padding-right: 10px;
 }
 
-ul li div.action img {
+ul li .action img {
     width: 35px;
 }
 
-ul li div.action img:hover {
+ul li .action img:hover {
     cursor: pointer;
 }
 
-ul li div.action img:active {
+ul li .action img:active {
     transform: scale(0.9);
 }
 
-ul li div.action button {
+ul li .action button {
     width: 100%;
     height: 30px;
     cursor: pointer;
@@ -68,28 +68,28 @@ ul li div.action button {
     justify-content: center;
 }
 
-ul li div.action button img {
+ul li .action button img {
     width: 15px;
     margin-left: 5px;
 }
 
-ul li div.action button:active {
+ul li .action button:active {
     transform: scale(0.98);
 }
 
-ul li div.action button.disabled {
+ul li .action button.disabled {
     background-color: #a4a4a4;
     transform: none;
 }
 
-div.informations {
+.informations {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-div.informations  div.input {
+.informations  .input {
     width: max-content;
     height: 40px;
     display: flex;
@@ -98,7 +98,7 @@ div.informations  div.input {
     justify-content: center;
 }
 
-div.informations div.input div.search_icon {
+.informations .input .search_icon {
     width: 27px;
     height: 27px;
     background-color: rebeccapurple;
@@ -111,11 +111,11 @@ div.informations div.input div.search_icon {
     justify-content: center;
 }
 
-div.informations div.input div.search_icon img {
+.informations .input .search_icon img {
     width: 15px;
 }
 
-div.informations div.input input {
+.informations .input input {
     width: 250px;
     height: 33px;
     outline: none;
@@ -125,7 +125,7 @@ div.informations div.input input {
     padding-right: 3px;
 }
 
-div.informations div.input input:focus {
+.informations .input input:focus {
     border: 2px rebeccapurple solid;
 }
 
