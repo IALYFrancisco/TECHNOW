@@ -14,7 +14,7 @@ ul li {
     min-width: 170px;
     box-shadow: 0 0 5px #83838379;
     border-radius: 2px;
-    padding: 2px 2px 12px 2px;
+    padding: 2px 2px 10px 2px;
 }
 
 ul li .img {
@@ -34,8 +34,7 @@ ul li .action {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 6px 0 6px;
 }
 
 ul li .action img {
