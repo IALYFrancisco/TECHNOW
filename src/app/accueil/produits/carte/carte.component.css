@@ -2,7 +2,7 @@ ul {
     background:rgb(245, 245, 245);
     width: calc(100vw - 290px);
     height: calc(100vh - 230px);
-    min-height: calc(100vh - 230px);
+    min-height: max-content;
     border-radius: 2px;
     display: flex;
     flex-wrap: wrap;
@@ -151,4 +151,10 @@ ul li .action button.disabled {
     margin-bottom: 5px;
     color: rebeccapurple;
     font-weight: 600;
+}
+
+@media only screen and (max-width: 700px) {
+    ul {
+        height: max-content;
+    }
 }
