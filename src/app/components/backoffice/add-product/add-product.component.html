@@ -39,7 +39,7 @@
       <div class="element">
         <label for="image">Image :</label>
         <!-- Ne pas utiliser formControlName ici -->
-        <input type="file" id="image" (change)="onFileSelected($event)">
+        <input type="file" id="image" (change)="onFileSelected($event)" accept="image/png, image/jpeg, image/jpg">
       </div>
       <div class="element">
         <label for="color">Couleur :</label>
