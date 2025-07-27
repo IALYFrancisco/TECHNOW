@@ -9,7 +9,7 @@
 <ul>
     <li *ngFor="let product of products">
         <div class="img">
-            <img src="" alt="" src="http://localhost:3000/{{product.image}}">
+            <img src="" alt="" src="{{apiBaseUrl}}/{{product.image}}">
         </div>
         <div class="category">
             {{ product.category}}
