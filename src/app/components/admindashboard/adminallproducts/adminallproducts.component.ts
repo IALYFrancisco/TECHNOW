@@ -10,10 +10,11 @@ import { environment } from 'src/environments/environment';
 export class AdminallproductsComponent implements OnInit {
 
   constructor( private http: HttpClient ) { }
+  apiBaseUrl = environment.API_BASE_URL
   products:any
   requestIsDone: boolean = false
   ngOnInit(): void {
-    this.http.get(`${environment.API_BASE_URL}/product/get`).subscribe({
+    this.http.get(`${this.apiBaseUrl}/product/get`).subscribe({
       next: (response) => {
         this.products = response
         this.requestIsDone = true

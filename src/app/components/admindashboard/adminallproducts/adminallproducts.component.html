@@ -22,7 +22,7 @@
         <tbody *ngIf="requestIsDone">
             <tr *ngFor="let product of products">
                 <td>
-                    <img src="assets/images/gpu.jpg" />
+                    <img src="{{apiBaseUrl}}/{{product.image}}" />
                 </td>
                 <td>
                     <h5>{{product.mark}} {{product.model}}</h5>
