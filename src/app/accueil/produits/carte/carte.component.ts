@@ -17,8 +17,10 @@ export class CarteComponent implements OnInit {
 
   products:any
 
+  apiBaseUrl = environment.API_BASE_URL
+
   ngOnInit(): void {
-    this.http.get(`${environment.API_BASE_URL}/product/get`)
+    this.http.get(`${this.apiBaseUrl}/product/get`)
     .subscribe({
       next: (data) => {
         this.products = data
