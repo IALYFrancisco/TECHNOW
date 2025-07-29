@@ -10,7 +10,6 @@ export class CategorieComponent implements OnInit {
   colorOptionToggled: boolean = true
   priceOptionToggled: boolean = true
   GPUIcon:string = '../../../assets/ICON/icons8-video-card-color/icons8-video-card-48.png';
-  RAMIcon:string = '../../../assets/ICON/icons8-ram-wanicon-lineal-color/icons8-ram-64.png';
   constructor() { }
 
   ngOnInit(): void {
