@@ -2,23 +2,23 @@
     <p class="title">Categories</p>
     <ul>
         <li>
-            <img src="" alt="" [src]="boitierIcon">
+            <img src="assets/images/uc.png" alt="">
             Boîtier
         </li>
         <li>
-            <img src="" alt="" [src]="carteMereIcon">
+            <img src="assets/images/mb.png" alt="">
             Carte mère
         </li>
         <li>
-            <img src="" alt="" [src]="CPUIcon">
+            <img src="assets/images/cpu.png" alt="">
             Processeur
         </li>
         <li>
-            <img src="" alt="" [src]="RAMIcon">
+            <img src="assets/images/ram.png" alt="">
             RAM
         </li>
         <li>
-            <img src="" alt="" [src]="GPUIcon">
+            <img src="assets/images/gpu.png" alt="">
             Carte graphique
         </li>
     </ul>
@@ -29,11 +29,11 @@
         <li [ngClass]="{'toggled': colorOptionToggled}">
             <div class="color_option" (click)="colorToggle()">
                 <span>
-                    <img alt="" src="../../../../assets/ICON/color.png">
+                    <img alt="" src="assets/images/colors.png">
                     Color
                 </span>
                 <span>
-                    <img [ngClass]="{'toggled': colorOptionToggled}" src="../../../../assets/ICON/arrow.png" alt="">
+                    <img [ngClass]="{'toggled': colorOptionToggled}" src="assets/images/arrow.png" alt="">
                 </span>
             </div>
             <div class="colors">
@@ -52,11 +52,11 @@
         <li [ngClass]="{'toggled': priceOptionToggled}">
             <div class="price_option" (click)="priceToggle()">
                 <span>
-                    <img alt="" src="../../../../assets/ICON/price.png">
+                    <img alt="" src="/assets/images/price.png">
                     Price
                 </span>
                 <span>
-                    <img [ngClass]="{'toggled': priceOptionToggled}" src="../../../../assets/ICON/arrow.png" alt="">
+                    <img [ngClass]="{'toggled': priceOptionToggled}" src="/assets/images/arrow.png" alt="">
                 </span>
             </div>
             <div class="prices">
