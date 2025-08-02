@@ -1,16 +1,14 @@
 main {
     display: flex;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 50px auto;
-    background-color: whitesmoke;
-    padding: 5px;
     border-radius: 5px;
+    column-gap: 20px;
 }
 
 .left {
     width: 50%;
-    background: green;
 }
 
 .right {
@@ -30,4 +28,35 @@ img {
 
 h1 {
     color: rebeccapurple;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    color: rebeccapurple;
+    margin-top: 10px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    color: rebeccapurple;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.price p {
+    margin-left: 5px;
+}
+
+.category p {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 5px;
+    color: red;
+}
+
+.color {
+    color: rebeccapurple;
+    margin-top: 10px;
 }
