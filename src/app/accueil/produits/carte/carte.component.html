@@ -8,7 +8,7 @@
 </div>
 <ul>
     <li *ngFor="let product of products">
-        <a routerLink="/product/details/12">
+        <a routerLink="/product/details/{{product.mark}}-{{product.model}}">
             <div class="img">
                 <img src="" alt="" src="{{apiBaseUrl}}/{{product.image}}">
             </div>
