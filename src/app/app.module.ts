@@ -57,6 +57,10 @@ const routes: Routes = [
         component: RegisterComponent
       }
     ]
+  },
+  {
+    path: '**',
+    component: AccueilComponent
   }
 ]
 
