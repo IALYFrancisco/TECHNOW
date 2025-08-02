@@ -15,10 +15,9 @@ export class DetailsproductComponent implements OnInit {
   product: any;
 
   ngOnInit(): void {
-    this.http.get(`${environment}/product/get`, ).subscribe({
-      next: (response)=>{}
+    this.http.get(`${environment.API_BASE_URL}/product/get?_id=${this.activeRoute.snapshot.paramMap.get('_id')}`).subscribe({
+      next: (response)=>{ console.log(response) }
     })
-    console.log(this.activeRoute.snapshot.paramMap.get('id'))
   }
 
 }
