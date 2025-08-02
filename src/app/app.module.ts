@@ -18,12 +18,16 @@ import { LoginComponent } from './views/authentication/login/login.component';
 import { RegisterComponent } from './views/authentication/register/register.component'
 import { InterceptorService } from './services/interceptor.service';
 import { AddProductComponent } from './components/backoffice/add-product/add-product.component';
+import { DetailsproductComponent } from './detailsproduct/detailsproduct.component';
 
 
 const routes: Routes = [
   { path: '',
     component:AccueilComponent
   },
+  // {
+  //   path: 'product/details/:id'
+  // },
   { 
     path: 'backoffice', component: AdmindashboardComponent, children: [
     { 
@@ -69,7 +73,8 @@ const routes: Routes = [
     AuthenticationComponent,
     LoginComponent,
     RegisterComponent,
-    AddProductComponent
+    AddProductComponent,
+    DetailsproductComponent
   ],
   imports: [
     BrowserModule,
