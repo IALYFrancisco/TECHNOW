@@ -23,7 +23,9 @@ import { DetailsproductComponent } from './detailsproduct/detailsproduct.compone
 
 const routes: Routes = [
   { path: '',
-    component:AccueilComponent
+    component: AccueilComponent, children: [
+      { path: '', component: ProduitsComponent }
+    ]
   },
   {
     path: 'product/details/:id',

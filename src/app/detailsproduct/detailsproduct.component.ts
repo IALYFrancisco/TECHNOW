@@ -11,7 +11,7 @@ export class DetailsproductComponent implements OnInit {
   constructor( private activeRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {
-    
+    console.log(this.activeRoute.snapshot.paramMap.get('id'))
   }
 
 }
