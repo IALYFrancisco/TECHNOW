@@ -25,9 +25,10 @@ const routes: Routes = [
   { path: '',
     component:AccueilComponent
   },
-  // {
-  //   path: 'product/details/:id'
-  // },
+  {
+    path: 'product/details/:id',
+    component: DetailsproductComponent
+  },
   { 
     path: 'backoffice', component: AdmindashboardComponent, children: [
     { 
