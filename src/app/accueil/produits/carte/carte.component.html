@@ -8,9 +8,11 @@
 </div>
 <ul>
     <li *ngFor="let product of products">
-        <div class="img">
-            <img src="" alt="" src="{{apiBaseUrl}}/{{product.image}}">
-        </div>
+        <a href="">
+            <div class="img">
+                <img src="" alt="" src="{{apiBaseUrl}}/{{product.image}}">
+            </div>
+        </a>
         <div class="category">
             {{ product.category}}
         </div>
