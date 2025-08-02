@@ -1,1 +1,10 @@
-<p>{{product.mark}}</p>
+<main *ngIf="product">
+    <section class="left">
+        <div class="img-container">
+            <img src="{{apiBaseUrl}}/{{product.image}}" alt="">
+        </div>
+    </section>
+    <section class="right">
+        <h1>{{product.mark}} {{product.model}}</h1>
+    </section>
+</main>

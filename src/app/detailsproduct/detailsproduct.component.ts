@@ -12,7 +12,8 @@ export class DetailsproductComponent implements OnInit {
 
   constructor( private activeRoute: ActivatedRoute, private http: HttpClient ) { }
 
-  product: any;
+  product: any = null;
+  apiBaseUrl: string = `${environment.API_BASE_URL}`
 
   ngOnInit(): void {
     this.http.get(`${environment.API_BASE_URL}/product/get?_id=${this.activeRoute.snapshot.paramMap.get('_id')}`).subscribe({
