@@ -2,9 +2,10 @@ main {
     display: flex;
     width: 100%;
     max-width: 600px;
-    margin: 50px auto;
+    margin: 100px auto 0 auto;
     border-radius: 5px;
     column-gap: 20px;
+    color: grey;
 }
 
 .left {
@@ -27,20 +28,20 @@ img {
 }
 
 h1 {
-    color: rebeccapurple;
+    /* color: rebeccapurple; */
 }
 
 .category {
     display: flex;
     align-items: center;
-    color: rebeccapurple;
+    /* color: rebeccapurple; */
     margin-top: 10px;
 }
 
 .price {
     display: flex;
     align-items: center;
-    color: rebeccapurple;
+    /* color: rebeccapurple; */
     margin-top: 10px;
     font-weight: 600;
 }
@@ -57,6 +58,27 @@ h1 {
 }
 
 .color {
-    color: rebeccapurple;
+    /* color: rebeccapurple; */
     margin-top: 10px;
+}
+
+.color h5 {
+    margin-bottom: 5px;
+}
+
+.product-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.descriptions {
+    /* color: rebeccapurple; */
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.descriptions p {
+    font-size: 13px;
+    font-weight: initial;
 }

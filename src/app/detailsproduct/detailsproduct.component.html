@@ -13,7 +13,16 @@
             <h5>Prix:</h5><p>Ar {{product.unite_price}}</p>
         </section>
         <section class="color">
-            <h5>Couleurs disponibles: </h5><p></p>
+            <h5>Couleurs disponibles: </h5>
+            <div class="product-color" style="background-color: {{product.color}}">
+                
+            </div>
+        </section>
+        <section class="descriptions">
+            <h5>Descriptions:</h5><p>{{product.description}}</p>
+        </section>
+        <section class="price">
+            <h5>Stock disponible:</h5><p>12 / {{product.stock}}</p>
         </section>
     </section>
 </main>
