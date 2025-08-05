@@ -1,0 +1,39 @@
+<main *ngIf="product">
+    <section class="left">
+        <div class="img-container">
+            <img src="{{apiBaseUrl}}/{{product.image}}" alt="">
+        </div>
+        <div class="images">
+            <div class="img-container">
+                <img src="{{apiBaseUrl}}/{{product.image}}" alt="">
+            </div>
+            <div class="img-container">
+                <img src="{{apiBaseUrl}}/{{product.image}}" alt="">
+            </div>
+            <div class="img-container">
+                <img src="{{apiBaseUrl}}/{{product.image}}" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="right">
+        <h1>{{product.mark}} {{product.model}}</h1>
+        <section class="category">
+            <h5>Categorie:</h5><p>{{product.category}}</p>
+        </section>
+        <section class="price">
+            <h5>Prix:</h5><p>Ar {{product.unite_price}}</p>
+        </section>
+        <section class="color">
+            <h5>Couleurs disponibles: </h5>
+            <div class="product-color" style="background-color: {{product.color}}">
+                
+            </div>
+        </section>
+        <section class="descriptions">
+            <h5>Descriptions:</h5><p>{{product.description}}</p>
+        </section>
+        <section class="price">
+            <h5>Stock disponible:</h5><p>12 / {{product.stock}}</p>
+        </section>
+    </section>
+</main>

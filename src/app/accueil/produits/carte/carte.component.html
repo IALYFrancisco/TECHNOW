@@ -3,14 +3,16 @@
         <div class="search_icon">
             <img src="assets/images/search.png" alt="">
         </div>
-        <input type="search" name="search=" id="" placeholder="Search ...">
+        <input type="search" name="search=" id="" placeholder="Recherchez des produits">
     </div>
 </div>
 <ul>
     <li *ngFor="let product of products">
-        <div class="img">
-            <img src="" alt="" src="{{apiBaseUrl}}/{{product.image}}">
-        </div>
+        <a routerLink="/product/details/{{product._id}}">
+            <div class="img">
+                <img src="" alt="" src="{{apiBaseUrl}}/{{product.image}}">
+            </div>
+        </a>
         <div class="category">
             {{ product.category}}
         </div>
