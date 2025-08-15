@@ -5,10 +5,12 @@
         </a>
     </span>
     <section>
-        <section>
-            <img *ngIf="connected | async" src="/assets/images/shopping-bag.png" alt="">
-            <span class="badge" *ngIf="(cart_items_number$ | async) > 0 && (connected | async)">{{cart_items_number$ | async}}</span>
-        </section>
+        <a routerLink="/cart">
+            <section>
+                <img *ngIf="connected | async" src="/assets/images/shopping-bag.png" alt="">
+                <span class="badge" *ngIf="(cart_items_number$ | async) > 0 && (connected | async)">{{cart_items_number$ | async}}</span>
+            </section>
+        </a>
         <button *ngIf="!(connected | async)" routerLink="/authentication/login">Se connecter</button>
         <button *ngIf="connected | async" (click)="LogOut()">Se déconnecter</button>
     </section>
