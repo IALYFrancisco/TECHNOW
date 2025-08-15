@@ -19,6 +19,7 @@ import { RegisterComponent } from './views/authentication/register/register.comp
 import { InterceptorService } from './services/interceptor.service';
 import { AddProductComponent } from './components/backoffice/add-product/add-product.component';
 import { DetailsproductComponent } from './detailsproduct/detailsproduct.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -78,7 +79,8 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     AddProductComponent,
-    DetailsproductComponent
+    DetailsproductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
