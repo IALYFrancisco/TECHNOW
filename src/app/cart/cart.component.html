@@ -1,0 +1,22 @@
+<main>
+    <h1>Votre panier :</h1>
+    <ul>
+        <li *ngFor="let product of (cart$ | async)">
+            <a routerLink="">
+                <ul>
+                    <li>
+                        <div class="img-container">
+                            <img src="{{apiBaseUrl}}/{{product.image}}" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <h4>{{product.mark}} {{product.model}}</h4>
+                    </li>
+                    <li>
+                        <h4>{{ product.unite_price }}</h4>
+                    </li>
+                </ul>
+            </a>
+        </li>
+    </ul>
+</main>

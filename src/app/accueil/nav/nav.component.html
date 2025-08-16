@@ -5,7 +5,7 @@
         </a>
     </span>
     <section>
-        <section>
+        <section  routerLink="/cart">
             <img *ngIf="connected | async" src="/assets/images/shopping-bag.png" alt="">
             <span class="badge" *ngIf="(cart_items_number$ | async) > 0 && (connected | async)">{{cart_items_number$ | async}}</span>
         </section>

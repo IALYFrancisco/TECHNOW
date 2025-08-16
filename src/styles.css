@@ -20,6 +20,14 @@ body {
     height: max-content;
 }
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 article ul {
     list-style-type: none;
 }
