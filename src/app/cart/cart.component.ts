@@ -15,7 +15,16 @@ export class CartComponent implements OnInit {
 
   cart$ = this.cart.cartItems$
 
+  total_price:number = 0
+
   ngOnInit(): void {
+    this.cart$.subscribe({
+      next: (products:any)=> {
+        products.forEach((product:any)=>{
+          this.total_price = this.total_price + product.unite_price
+        })
+      }
+    })
   }
 
 }
